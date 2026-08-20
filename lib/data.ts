@@ -3,23 +3,24 @@
 
 export const MARQUEE = [
   "WORST CASE SCENARIO: A BEAR KILLS YOU",
-  "ELEVATION. SNACKS. REPEAT.",
-  "PADDLE NOW, PANIC LATER",
-  "I DON'T FOLLOW TRAILS, I INVENT DETOURS",
+  "JUST OUTRUN YOUR BUDDY",
+  "TURNING AROUND STILL COUNTS",
+  "BEAR SAFETY: STAY CALM",
   "THE NAP IS PART OF THE TRAINING",
+  "CONVERSATIONAL PACE ONLY",
 ];
 
 export const TENETS = [
-  { no: "01", title: "Pace: conversational", body: "If you can't finish a sentence, you're doing a different sport and we wish you well." },
-  { no: "02", title: "Snacks are gear", body: "Weight is weight. Ours is edible, which makes it strategic." },
+  { no: "01", title: "Conversational pace", body: "If you can't finish a sentence, you're doing a different sport. We wish you well." },
+  { no: "02", title: "Snacks are gear", body: "Weight is weight. Ours is edible. We consider that an advantage." },
   { no: "03", title: "Turning around counts", body: "Nobody has ever asked to see the summit photo. Ask us how we know." },
-  { no: "04", title: "No PRs, ever", body: "We have never timed anything, including the making of this website." },
+  { no: "04", title: "No PRs", body: "We have never timed anything. Including the making of this website." },
 ];
 
 export const REVIEWS = [
-  { stars: "★★★★★", text: "Wore this on a hike where I stopped four times in the first mile. Nobody questioned it. The shirt did the explaining.", who: "DANA R. — VERIFIED SITTER" },
-  { stars: "★★★★★", text: "Bought the bear one thinking it was a joke. It is a joke. It is also the softest shirt I own, which feels like a trick.", who: "MARCUS T. — TRAIL ADJACENT" },
-  { stars: "★★★★☆", text: "Docking a star because my hiking group now calls me by the shirt instead of my name. Otherwise perfect.", who: "PRIYA K. — BACK OF THE PACK" },
+  { stars: "★★★★★", text: "Stopped four times in the first mile. Nobody said a word. The shirt did the explaining.", who: "Dana R." },
+  { stars: "★★★★★", text: "Bought the bear one as a joke. It is a joke. It's also the softest thing I own now.", who: "Marcus T." },
+  { stars: "★★★★☆", text: "Docking a star because my hiking group has started calling me by the shirt instead of my name.", who: "Priya K." },
 ];
 
 /* Inches, laid flat. Extended to 4XL to match the live Fourthwall range. */
@@ -34,11 +35,11 @@ export const SIZETABLE = [
 ];
 
 export const FAQS = [
-  { q: "Is this technical apparel?", a: "No. It's cotton. It gets wet and stays wet, which we consider an excellent reason to go home early." },
-  { q: "How does it fit?", a: "Relaxed through the body, because the body is usually seated. If you want it tighter, size down. If you want it looser, that is the correct instinct." },
-  { q: "Will this make me faster?", a: "It will not. If anything it has been shown to reduce urgency in controlled trailhead conditions." },
-  { q: "Do you ship internationally?", a: "Yes, to most places, in three to five business days. Slower than that and it would be on brand, but we resisted." },
-  { q: "Returns?", a: "Thirty days, unworn, no questions. If you wore it and a bear ate it, that is covered under our policy of laughing about it together." },
+  { q: "Is this technical apparel?", a: "No. It's cotton. It gets wet and stays wet. We think that's a fine reason to head back early." },
+  { q: "How does it fit?", a: "Relaxed through the body. Size down if you want it closer to the frame. Size up if you're being honest with yourself." },
+  { q: "Will this make me faster?", a: "No. Early results suggest a mild slowing effect at the trailhead." },
+  { q: "Do you ship internationally?", a: "Yes, most places, three to five business days. Slower would have been on brand. We resisted." },
+  { q: "Returns?", a: "Thirty days, unworn, no questions asked. If you wore it and a bear ate it, come tell us the story." },
 ];
 
 export const LOGO_URL =

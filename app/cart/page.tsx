@@ -14,9 +14,9 @@ export default function Cart() {
         <div className="empty">
           <p style={{ margin: "0 0 6px", font: "400 27px/1.2 var(--disp)" }}>Suspiciously light</p>
           <p style={{ margin: "0 0 22px", fontSize: 16, color: "rgba(51,64,42,.65)" }}>
-            Which is, admittedly, our entire philosophy. Still.
+            That's more or less our whole position. Still.
           </p>
-          <Link href="/shop" className="btn-rust" style={{ padding: "15px 26px", fontSize: 13 }}>GO GET SOMETHING</Link>
+          <Link href="/shop" className="btn-rust" style={{ padding: "15px 26px", fontSize: 13 }}>Go get something</Link>
         </div>
       </main>
     );
@@ -40,7 +40,7 @@ export default function Cart() {
                   <button className="qtybtn" aria-label="Decrease quantity" onClick={() => bump(l.key, -1)}>−</button>
                   <span style={{ minWidth: 20, textAlign: "center", font: "700 13px/1 var(--mono)" }}>{l.qty}</span>
                   <button className="qtybtn" aria-label="Increase quantity" onClick={() => bump(l.key, 1)}>+</button>
-                  <button className="removebtn" onClick={() => bump(l.key, -l.qty)}>REMOVE</button>
+                  <button className="removebtn" onClick={() => bump(l.key, -l.qty)}>Remove</button>
                 </div>
               </div>
               <span style={{ font: "700 15px/1 var(--mono)" }}>${l.total.toFixed(2)}</span>
@@ -62,7 +62,7 @@ export default function Cart() {
           <div className="row"><span>Est. tax</span><span className="v">${tax}</span></div>
           <hr />
           <div className="totalrow"><span className="t">Total</span><span className="v">${total}</span></div>
-          <Link href="/checkout" className="btn-butter" style={{ marginTop: 10 }}>CHECKOUT</Link>
+          <Link href="/checkout" className="btn-butter" style={{ marginTop: 10 }}>Checkout</Link>
           <p className="note">Payment, taxes and fulfillment handled by Fourthwall&rsquo;s secure checkout.</p>
         </aside>
       </div>

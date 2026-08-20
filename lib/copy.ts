@@ -1,82 +1,79 @@
 /* ============================================================
    MGSC COPY LAYER
 
-   The catalog itself is live from Fourthwall (names, photos,
-   colours, sizes, prices). This file is the part a machine
-   cannot supply: the voice.
+   Catalog is live from Fourthwall. This file is the part a
+   machine can't supply: the voice.
 
-   Keyed by Fourthwall product slug. Add a product in Fourthwall
-   and it appears on the site immediately using FALLBACK copy.
-   Write an entry here and it gets the full treatment.
+   Rules that keep this from sounding generated:
+   - Not every line is a punchline. Some are just facts.
+   - No trailing ", which ..." ironic qualifiers.
+   - Vary length. Short. Then something longer that earns it.
+
+   Keyed by Fourthwall slug. Add a product in Fourthwall and it
+   shows up using FALLBACK. Write an entry and it gets the real
+   treatment.
    ============================================================ */
 
 export type Copy = {
-  /** Overrides the Fourthwall product name. Leave undefined to use theirs. */
   name?: string;
-  /** Small badge on the card. */
   tag?: string;
-  /** One line under the product name on cards. */
   blurb: string;
-  /** Longer paragraph on the product page. */
   desc: string;
-  /** Drives the shop filter. */
   kind?: "TEE" | "HOODIE";
 };
 
 export const COPY: Record<string, Copy> = {
   "worst-case-scenario": {
-    tag: "FAN FAVORITE",
+    tag: "Fan favourite",
     blurb: "A bear kills you. Everything else is fine.",
     desc:
-      "A gentle reframing device for trail anxiety. Once you accept the worst case, the mosquitoes stop feeling like a big deal. Wear it as a coping mechanism or a warning to whoever agreed to come with you.",
+      "Trail anxiety gets easier once you name the ceiling. Either a bear gets you or it doesn't. Everything under that line is mosquitoes and a wet sock. Two colour print on garment-dyed cotton.",
   },
   "bear-encounter-checklist": {
-    tag: "BESTSELLER",
-    blurb: "Instructions you will not read in time.",
+    tag: "Bestseller",
+    blurb: "Steps you will not remember.",
     desc:
-      "Every step is correct. Every step is also impossible to recall while a bear is looking at you. We printed it on a shirt so the bear can read it, which felt like the more realistic plan.",
+      "Every instruction on here is correct. None of it is retrievable while a bear is looking at you. We printed it anyway so at least the bear gets a copy.",
   },
   "bear-safety-stay-calm": {
-    tag: "CORE",
-    blurb: "The advice is stay calm. That is the whole advice.",
+    blurb: "The advice is stay calm. That's the whole advice.",
     desc:
-      "Two words that have never once worked on anybody. Printed large so a member of your group can point at your chest instead of finishing their sentence.",
+      "Two words that have never once worked on anybody. Printed large enough that a friend can point at your chest instead of finishing the sentence.",
   },
   "just-outrun-your-buddy": {
-    tag: "AS SEEN ON THE GOAT",
-    blurb: "The strategy nobody admits to and everybody has.",
+    tag: "As seen on the goat",
+    blurb: "Everyone's plan. Nobody's out loud.",
     desc:
-      "You do not need to be fast. You need to be marginally less slow than the person who invited you. Wear it openly so the terms of the friendship are clear before the trailhead.",
+      "You don't need to be fast. You need to be slightly less slow than whoever invited you. Wearing it up front keeps the terms clear at the trailhead.",
   },
   "mountain-g-o-a-t-essential-tee": {
-    tag: "THE FLAGSHIP",
-    blurb: "The logo, the goat, the entire thesis.",
+    tag: "The flagship",
+    blurb: "The logo, the goat, the whole argument.",
     desc:
-      "Our founding argument, printed large enough to be read from the bench you are sitting on. Heavyweight cotton that softens with every trip and hides every snack.",
+      "Garment-dyed heavyweight cotton. Softens every trip, hides most of a granola bar, and outlasts the enthusiasm that made you buy it. This is the one we actually wear.",
   },
   "mountain-g-o-a-t-psychedelic": {
-    tag: "NEW",
-    blurb: "What the summit looks like on hour six with no water.",
+    tag: "New",
+    blurb: "Hour six. No water. The mountain starts doing things.",
     desc:
-      "Somewhere past the fourth false peak the mountain starts doing things colour-wise. We had an artist draw it. Nobody who has finished a long descent has questioned the accuracy.",
+      "Somewhere past the fourth false summit the colours go sideways. We had an artist draw what that looks like. Nobody who has finished a long descent has argued with it.",
   },
   "the-minimalist": {
-    tag: "QUIET ONE",
-    blurb: "For subtle people who still want credit.",
+    blurb: "Small print. Same opinion.",
     desc:
-      "A small hit for anyone who wants the affiliation without the announcement. Understated enough for a coffee shop, legible enough that the right person will nod at you.",
+      "For people who want the affiliation without the announcement. Quiet enough for a coffee shop. Legible enough that the right person nods on the way past.",
   },
 };
 
-/** Used for any Fourthwall product with no entry above. */
-/* The product was renamed WORSE -> WORST and its slug changed with it. The
-   storefront API caches slugs for a while, so accept both spellings. */
+/* The product was renamed WORSE -> WORST and its slug moved with it.
+   Fourthwall caches slugs across nodes, so accept both spellings. */
 COPY["worse-case-scenario"] = COPY["worst-case-scenario"];
 
+/** Any Fourthwall product with no entry above. */
 export const FALLBACK: Copy = {
-  blurb: "New. We have not written the joke yet.",
+  blurb: "New in. Joke pending.",
   desc:
-    "This one is fresh off the press and our copywriter is currently sitting on a log. Same heavyweight cotton, same relaxed fit, same refusal to make you faster.",
+    "Fresh off the press. Our copywriter is sitting on a log somewhere. Same cotton, same relaxed cut, same refusal to make you faster.",
   kind: "TEE",
 };
 
@@ -84,7 +81,7 @@ export function copyFor(slug: string): Copy {
   return COPY[slug] ?? FALLBACK;
 }
 
-/** Cross-sell ordering, by slug. Falls back to "everything else". */
+/** Cross-sell ordering, by slug. Falls back to whatever else exists. */
 export const XSELL: Record<string, string[]> = {
   "worst-case-scenario": ["bear-encounter-checklist", "just-outrun-your-buddy"],
   "bear-encounter-checklist": ["bear-safety-stay-calm", "worst-case-scenario"],

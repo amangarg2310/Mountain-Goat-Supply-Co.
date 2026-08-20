@@ -44,7 +44,7 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
 
   return (
     <main style={{ padding: "30px var(--pad) 110px" }}>
-      <Link href="/shop" className="backlink" style={{ marginBottom: 22 }}>← BACK TO SHOP</Link>
+      <Link href="/shop" className="backlink" style={{ marginBottom: 22 }}>← Back to shop</Link>
       <div className="pd">
         <div>
           <div className="art big">
@@ -73,14 +73,14 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
               {p.compareAt ? <span className="cmp" style={{ fontSize: 16 }}>${p.compareAt}.00</span> : null}
               ${price}
             </p>
-            {p.compareAt ? <span className="salebadge">MARKED DOWN. DON&rsquo;T ASK.</span> : null}
+            {p.compareAt ? <span className="salebadge">Marked down. Don&rsquo;t ask.</span> : null}
           </div>
           <p className="pd-desc">{p.desc}</p>
 
           {p.colours.length > 1 ? (
             <div>
               <span className="lbl" style={{ marginBottom: 10 }}>
-                COLOR&nbsp;&nbsp;·&nbsp;&nbsp;{colour.toUpperCase()}
+                Colour&nbsp;&nbsp;·&nbsp;&nbsp;{colour.toUpperCase()}
               </span>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                 {p.colours.map((c) => (
@@ -100,8 +100,8 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
 
           <div>
             <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 10 }}>
-              <span className="lbl">SIZE</span>
-              <Link href="/fit" className="backlink" style={{ fontSize: 10, color: "var(--rust)", textDecoration: "underline" }}>SIZE GUIDE</Link>
+              <span className="lbl">Size</span>
+              <Link href="/fit" className="backlink" style={{ fontSize: 10, color: "var(--rust)", textDecoration: "underline" }}>Size guide</Link>
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
               {p.sizes.map((z) => {
@@ -123,18 +123,18 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
           </div>
 
           <button className="addbtn" onClick={doAdd} disabled={!variant}>
-            {added ? "IN THE PACK ✓" : variant ? <>ADD TO CART&nbsp;&nbsp;·&nbsp;&nbsp;${price}</> : "PICK A COMBINATION"}
+            {added ? "In the pack ✓" : variant ? <>Add to cart&nbsp;&nbsp;·&nbsp;&nbsp;${price}</> : "Pick a combination"}
           </button>
 
           <div className="trust">
-            <div><Star /><span>4.9 from verified sitters, trail adjacents, and one skeptical spouse</span></div>
+            <div><Star /><span>4.9 average from people who mostly sit down partway up</span></div>
             <div><Loop /><span>Thirty day returns. The bear clause applies.</span></div>
-            <div><Box /><span>Ships in 3 to 5 days, which for us is sprinting</span></div>
+            <div><Box /><span>Ships in 3 to 5 days. Sprinting, for us</span></div>
           </div>
 
           <div className="guarantee">
-            <span className="t">THE SOMETHING WENT WRONG POLICY</span>
-            <p>Damaged, defective, or just wrong. Full refund inside 30 days. An actual human replies, usually the one who feeds the goat.</p>
+            <span className="t">If something goes wrong</span>
+            <p>Damaged, defective or just wrong. Full refund inside 30 days. A real person answers, usually the one who feeds the goat.</p>
           </div>
 
           {p.details.length ? (
@@ -164,7 +164,7 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
           <div className="p">${price}</div>
         </div>
         <button className="addbtn" style={{ padding: "14px 22px", fontSize: 12.5 }} onClick={doAdd} disabled={!variant}>
-          {added ? "IN THE PACK ✓" : "ADD TO CART"}
+          {added ? "In the pack ✓" : "Add to cart"}
         </button>
       </div>
     </main>

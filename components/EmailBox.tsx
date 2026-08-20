@@ -11,7 +11,7 @@ export default function EmailBox() {
       </div>
       <form onSubmit={(e) => { e.preventDefault(); setSubbed(true); }}>
         <input type="email" required placeholder="you@email.com" aria-label="Email address" />
-        <button type="submit" className="btn-forest">{subbed ? "OK, YOU'RE IN" : "SIGN ME UP"}</button>
+        <button type="submit" className="btn-forest">{subbed ? "You're in" : "Sign me up"}</button>
       </form>
     </div>
   );

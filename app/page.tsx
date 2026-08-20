@@ -14,31 +14,31 @@ export default async function Home() {
     <main>
       <section className="hero-bill">
         <h1 className="sr-only">
-          Hike Now, Regret Less (Maybe). Mountain G.O.A.T Supply Co. Technical apparel for people who hike, snack, question life, then hike some more.
+          Hike Now, Regret Less (Maybe). Mountain G.O.A.T Supply Co. Cotton shirts for people who hike slowly and stop often.
         </h1>
         <img
           src="/assets/hero-billboard.jpg"
           alt="A hiker in an Over Elevated Club tee sharing a granola bar with a goat in sunglasses and a Goat Goals tee, mountains behind them, headline reading Hike Now, Regret Less, Maybe"
           fetchPriority="high"
         />
-        <Link href="/shop" className="bill-btn" aria-label="Shop the chaos" />
+        <Link href="/shop" className="bill-btn" aria-label="Shop the shirts" />
         <svg className="cue" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </section>
-      <div className="m-cta"><Link href="/shop" className="btn-chaos">SHOP THE CHAOS</Link></div>
+      <div className="m-cta"><Link href="/shop" className="btn-chaos">Shop the shirts</Link></div>
       <Marquee />
 
       {products.length ? (
         <>
           <section className="sechead">
             <div>
-              <h2 className="h-sec" style={{ marginBottom: 6 }}>The whole catalog</h2>
+              <h2 className="h-sec" style={{ marginBottom: 6 }}>Everything we make</h2>
               <p className="sub-muted">
-                {products.length} design{products.length === 1 ? "" : "s"}. All in stock, which surprised us too.
+                {products.length} design{products.length === 1 ? "" : "s"}. All in stock.
               </p>
             </div>
-            <Link href="/shop" className="btn-hollow">VIEW ALL&nbsp;&nbsp;→</Link>
+            <Link href="/shop" className="btn-hollow">View all&nbsp;&nbsp;→</Link>
           </section>
           <section className="pad" style={{ paddingTop: 24, paddingBottom: 74 }}>
             <div className="grid">{products.slice(0, 4).map((p) => <ProductCard key={p.id} p={p} />)}</div>
@@ -49,11 +49,11 @@ export default async function Home() {
       <section className="manifesto">
         <Reveal>
           <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-            <h2>Somebody had to represent the back of the pack</h2>
+            <h2>Somebody had to speak for the back of the pack</h2>
             <p className="txt">
-              Every other outdoor brand wants to sell you a personal record. We sell you something to wear while sitting
-              on a log, eating a bar you found in a jacket pocket from last October. The mountain has never once asked
-              how fast you got there. Neither will we.
+              Every other outdoor brand is selling you a personal record. We make things to wear while sitting on a log,
+              eating a bar you found in a jacket pocket from last October. The mountain has never asked how fast you got
+              there. Neither will we.
             </p>
             <blockquote>&ldquo;Worst Case Scenario: A Bear Kills You.&rdquo;</blockquote>
           </div>
@@ -66,9 +66,9 @@ export default async function Home() {
       </section>
 
       <section style={{ padding: "70px var(--pad) 20px" }}>
-        <h2 className="h-mid" style={{ marginBottom: 8 }}>Reviews we did not edit</h2>
+        <h2 className="h-mid" style={{ marginBottom: 8 }}>Reviews we didn't edit</h2>
         <p className="sub-muted" style={{ marginBottom: 28 }}>
-          Verified buyers. Unverified fitness. 4.9 average, and the missing star is explained below.
+          Verified buyers. Unverified fitness. 4.9 average, and the missing star explains itself below.
         </p>
         <div className="revgrid">
           {REVIEWS.map((r, i) => (

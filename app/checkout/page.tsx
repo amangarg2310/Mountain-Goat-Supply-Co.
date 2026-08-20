@@ -25,21 +25,21 @@ export default function Checkout() {
         <h1 className="h-page">Checkout</h1>
         <div className="empty">
           <p style={{ margin: "0 0 22px", fontSize: 16, color: "rgba(51,64,42,.65)" }}>
-            There is nothing to check out, which makes this the fastest transaction we have ever processed.
+            Nothing to check out. Fastest transaction we have ever processed.
           </p>
-          <Link href="/shop" className="btn-rust" style={{ padding: "15px 26px", fontSize: 13 }}>GO GET SOMETHING</Link>
+          <Link href="/shop" className="btn-rust" style={{ padding: "15px 26px", fontSize: 13 }}>Go get something</Link>
         </div>
       </main>
     );
 
   return (
     <main style={{ padding: "46px var(--pad) 80px", maxWidth: 1080, margin: "0 auto" }}>
-      <Link href="/cart" className="backlink" style={{ marginBottom: 18 }}>← BACK TO CART</Link>
+      <Link href="/cart" className="backlink" style={{ marginBottom: 18 }}>← Back to cart</Link>
       <h1 className="h-page">Checkout</h1>
       <div className="cartgrid">
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <fieldset>
-            <legend>WHAT HAPPENS NEXT</legend>
+            <legend>What happens next</legend>
             <div className="fwnote">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" style={{ flexShrink: 0, marginTop: 1 }} aria-hidden="true">
                 <rect x="3" y="10" width="18" height="11" rx="2.5" stroke="#33402A" strokeWidth="2" />
@@ -47,18 +47,18 @@ export default function Checkout() {
               </svg>
               <span>
                 Shipping and card details happen on the next screen, handled by Fourthwall&rsquo;s secure checkout.
-                We never see your number, which is honestly best for everyone.
+                We never see your card number. Best for everyone.
               </span>
             </div>
             <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: "rgba(51,64,42,.72)" }}>
-              Your cart carries over exactly as it is below. Final shipping and tax are calculated there, so the
-              numbers on this page are our best estimate rather than a promise.
+              Your cart carries over exactly as it is below. Final shipping and tax get calculated there, so treat the
+              numbers on this page as a close estimate.
             </p>
           </fieldset>
 
           <div>
             <button className="addbtn" style={{ width: "100%" }} onClick={go} disabled={busy}>
-              {busy ? "OPENING CHECKOUT…" : <>CONTINUE TO SECURE CHECKOUT&nbsp;&nbsp;·&nbsp;&nbsp;${total}</>}
+              {busy ? "Opening checkout…" : <>Continue to secure checkout&nbsp;&nbsp;·&nbsp;&nbsp;${total}</>}
             </button>
             {err ? (
               <p role="alert" style={{ margin: "10px 0 0", textAlign: "center", fontSize: 13, color: "var(--rust)" }}>{err}</p>

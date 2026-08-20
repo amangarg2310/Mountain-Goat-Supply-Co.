@@ -31,7 +31,7 @@ export default function ShopClient({ products }: { products: Product[] }) {
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 32, paddingBottom: 24, borderBottom: "1.5px solid rgba(51,64,42,.16)" }}>
               {tabs.map((f) => (
                 <button key={f} className={`chip${filter === f ? " on" : ""}`} aria-pressed={filter === f} onClick={() => setFilter(f)}>
-                  {f === "ALL" ? "EVERYTHING" : f + "S"}
+                  {f === "ALL" ? "Everything" : f.charAt(0) + f.slice(1).toLowerCase() + "s"}
                 </button>
               ))}
             </div>
