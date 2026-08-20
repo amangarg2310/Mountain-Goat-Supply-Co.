@@ -228,3 +228,16 @@ footer.site{background:var(--pine);color:rgba(254,247,238,.8);padding:56px var(-
   .xsell{grid-template-columns:1fr 1fr}
 }
 @media (min-width:641px){.sticky-atc{display:none!important}}
+
+/* ---- live product imagery (Fourthwall) ---- */
+.art img{width:100%;height:100%;object-fit:cover;display:block}
+.art{background:var(--warm)}
+.thumb{cursor:pointer;padding:0;position:relative}
+.thumb.on{border-color:var(--rust);box-shadow:0 0 0 2px rgba(168,73,42,.25)}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.linetone{overflow:hidden;background:var(--warm)}
+.linetone img{width:100%;height:100%;object-fit:cover;display:block}
+.sizebtn:disabled{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+.addbtn:disabled{opacity:.55;cursor:not-allowed}
+.faq .a ul{margin:0;padding-left:18px}
+.faq .a li{margin-bottom:4px}

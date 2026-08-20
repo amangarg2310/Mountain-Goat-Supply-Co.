@@ -4,7 +4,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/components/CartContext";
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://mountaingoathiking.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Mountain G.O.A.T Supply Co. — Anti-Hustle Outdoor Apparel",
   description: "Technical apparel for people who hike, snack, question life, then hike some more. Elevation optional. Snacks mandatory.",
   openGraph: {

@@ -1,33 +1,31 @@
 import Link from "next/link";
-import type { Product } from "@/lib/data";
+import type { Product } from "@/lib/fourthwall";
 
-export function ArtBox({ p, tag, big }: { p: Product; tag?: string; big?: boolean }) {
+export function ArtBox({ p, big }: { p: Product; big?: boolean }) {
+  const src = p.images[0];
   return (
-    <div
-      className={`art${big ? " big" : ""}`}
-      style={{ background: p.tone, backgroundImage: "repeating-linear-gradient(135deg,rgba(35,42,28,.06) 0 2px,transparent 2px 10px)" }}
-    >
-      <span className="ph">{p.art}</span>
-      {tag ? <span className="ptag">{tag}</span> : null}
+    <div className={`art${big ? " big" : ""}`}>
+      {src ? (
+        <img src={src} alt={p.name} loading={big ? "eager" : "lazy"} />
+      ) : (
+        <span className="ph">{p.name}</span>
+      )}
+      {p.tag ? <span className="ptag">{p.tag}</span> : null}
     </div>
-  );
-}
-
-export function Price({ p, cmpClass }: { p: Product; cmpClass?: string }) {
-  return (
-    <span><span className={`cmp ${cmpClass || ""}`}>${p.cmp}</span>${p.price}</span>
   );
 }
 
 export default function ProductCard({ p }: { p: Product }) {
   return (
-    <Link href={`/product/${p.id}`} className="pcard">
-      <ArtBox p={p} tag={p.tag} />
+    <Link href={`/product/${p.slug}`} className="pcard">
+      <ArtBox p={p} />
       <div style={{ display: "flex", flexDirection: "column", gap: 5, padding: "0 4px 4px" }}>
         <h3 className="pname">{p.name}</h3>
         <p className="pblurb">{p.blurb}</p>
         <div className="prow">
-          <Price p={p} />
+          <span>
+            {p.compareAt ? <span className="cmp">${p.compareAt}</span> : null}${p.price}
+          </span>
           <span className="pkind">{p.kind}</span>
         </div>
       </div>

@@ -6,6 +6,8 @@ import ProductCard from "@/components/ProductCard";
 import { REVIEWS } from "@/lib/data";
 import { getProducts } from "@/lib/fourthwall";
 
+export const revalidate = 300;
+
 export default async function Home() {
   const products = await getProducts();
   return (
@@ -27,16 +29,22 @@ export default async function Home() {
       <div className="m-cta"><Link href="/shop" className="btn-chaos">SHOP THE CHAOS</Link></div>
       <Marquee />
 
-      <section className="sechead">
-        <div>
-          <h2 className="h-sec" style={{ marginBottom: 6 }}>The whole catalog</h2>
-          <p className="sub-muted">Eight designs. All in stock, which surprised us too.</p>
-        </div>
-        <Link href="/shop" className="btn-hollow">VIEW ALL&nbsp;&nbsp;→</Link>
-      </section>
-      <section className="pad" style={{ paddingTop: 24, paddingBottom: 74 }}>
-        <div className="grid">{products.slice(0, 4).map((p) => <ProductCard key={p.id} p={p} />)}</div>
-      </section>
+      {products.length ? (
+        <>
+          <section className="sechead">
+            <div>
+              <h2 className="h-sec" style={{ marginBottom: 6 }}>The whole catalog</h2>
+              <p className="sub-muted">
+                {products.length} design{products.length === 1 ? "" : "s"}. All in stock, which surprised us too.
+              </p>
+            </div>
+            <Link href="/shop" className="btn-hollow">VIEW ALL&nbsp;&nbsp;→</Link>
+          </section>
+          <section className="pad" style={{ paddingTop: 24, paddingBottom: 74 }}>
+            <div className="grid">{products.slice(0, 4).map((p) => <ProductCard key={p.id} p={p} />)}</div>
+          </section>
+        </>
+      ) : null}
 
       <section className="manifesto">
         <Reveal>

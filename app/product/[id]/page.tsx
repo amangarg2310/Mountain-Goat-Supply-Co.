@@ -1,18 +1,28 @@
 import { notFound } from "next/navigation";
-import { PRODUCTS } from "@/lib/data";
+import { getProducts, getProduct, getRelated } from "@/lib/fourthwall";
 import ProductClient from "./ProductClient";
 
-export function generateStaticParams() {
-  return PRODUCTS.map((p) => ({ id: p.id }));
+export const revalidate = 300;
+
+export async function generateStaticParams() {
+  const products = await getProducts();
+  return products.map((p) => ({ id: p.slug }));
 }
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const p = PRODUCTS.find((x) => x.id === id);
-  return { title: p ? `${p.name} — Mountain G.O.A.T Supply Co.` : "Product" };
+  const p = await getProduct(id);
+  return {
+    title: p ? `${p.name} — Mountain G.O.A.T Supply Co.` : "Product",
+    description: p?.blurb,
+    openGraph: p?.images[0] ? { images: [p.images[0]] } : undefined,
+  };
 }
+
 export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const p = PRODUCTS.find((x) => x.id === id);
+  const p = await getProduct(id);
   if (!p) notFound();
-  return <ProductClient p={p} />;
+  const related = await getRelated(id);
+  return <ProductClient p={p} related={related} />;
 }
