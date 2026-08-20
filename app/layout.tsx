@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mountain G.O.A.T Supply Co.",
     description: "Cotton shirts for people who hike slowly and stop often.",
-    images: ["/assets/hero-billboard.jpg"],
+    images: ["/assets/hero.jpg"],
   },
 };
 

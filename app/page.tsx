@@ -12,21 +12,27 @@ export default async function Home() {
   const products = await getProducts();
   return (
     <main>
-      <section className="hero-bill">
-        <h1 className="sr-only">
-          Hike Now, Regret Less (Maybe). Mountain G.O.A.T Supply Co. Cotton shirts for people who hike slowly and stop often.
-        </h1>
-        <img
-          src="/assets/hero-billboard.jpg"
-          alt="A hiker in an Over Elevated Club tee sharing a granola bar with a goat in sunglasses and a Goat Goals tee, mountains behind them, headline reading Hike Now, Regret Less, Maybe"
-          fetchPriority="high"
-        />
-        <Link href="/shop" className="bill-btn" aria-label="Shop the shirts" />
-        <svg className="cue" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+      <section className="hero">
+        <picture>
+          <source media="(max-width: 760px)" srcSet="/assets/hero-sm.jpg" />
+          <img
+            className="hero-img"
+            src="/assets/hero.jpg"
+            alt="A hiker in an Over Elevated Club tee sharing a granola bar with a goat in sunglasses and a Goat Goals tee, mountains behind them"
+            fetchPriority="high"
+            width={1766}
+            height={891}
+          />
+        </picture>
+        <div className="hero-copy">
+          <h1>
+            Hike now,<br />regret less<br />(maybe).
+          </h1>
+          <p>Cotton shirts for people who hike slowly and stop often.</p>
+          <Link href="/shop" className="btn-hero">Shop the shirts</Link>
+        </div>
       </section>
-      <div className="m-cta"><Link href="/shop" className="btn-chaos">Shop the shirts</Link></div>
+
       <Marquee />
 
       {products.length ? (
