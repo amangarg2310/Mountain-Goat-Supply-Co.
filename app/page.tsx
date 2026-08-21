@@ -38,12 +38,9 @@ export default async function Home() {
         <>
           <section className="sechead">
             <div>
-              <h2 className="h-sec" style={{ marginBottom: 6 }}>Everything we make</h2>
-              <p className="sub-muted">
-                {products.length} design{products.length === 1 ? "" : "s"}. All in stock.
-              </p>
+              <h2 className="h-sec" style={{ marginBottom: 6 }}>Pick of the herd</h2>
             </div>
-            <Link href="/shop" className="btn-hollow">See the rest&nbsp;&nbsp;→</Link>
+            <Link href="/shop" className="btn-hollow">See the whole herd&nbsp;&nbsp;→</Link>
           </section>
           <section className="pad" style={{ paddingTop: 24, paddingBottom: 74 }}>
             <div className="grid">{products.slice(0, 4).map((p) => <ProductCard key={p.id} p={p} />)}</div>
