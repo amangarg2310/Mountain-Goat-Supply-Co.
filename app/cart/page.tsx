@@ -14,7 +14,7 @@ export default function Cart() {
         <div className="empty">
           <p style={{ margin: "0 0 6px", font: "400 27px/1.2 var(--disp)" }}>Suspiciously light</p>
           <p style={{ margin: "0 0 22px", fontSize: 16, color: "rgba(51,64,42,.65)" }}>
-            That's more or less our whole position. Still.
+            There is nothing in here.
           </p>
           <Link href="/shop" className="btn-rust" style={{ padding: "15px 26px", fontSize: 13 }}>Let's fix that</Link>
         </div>

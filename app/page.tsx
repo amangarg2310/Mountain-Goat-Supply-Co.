@@ -27,7 +27,7 @@ export default async function Home() {
           <h1>
             Hike now,<br />regret less<br />(maybe).
           </h1>
-          <p>Cotton shirts for slow hikers, frequent sitters, and one goat with strong opinions about snacks.</p>
+          <p>Cotton tees for people who hike slowly. Our spokesperson is a goat.</p>
           <Link href="/shop" className="btn-hero">Take me to the shirts</Link>
         </div>
       </section>
@@ -54,11 +54,10 @@ export default async function Home() {
       <section className="manifesto">
         <Reveal>
           <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-            <h2>Somebody had to speak for the back of the pack</h2>
+            <h2>The back of the pack</h2>
             <p className="txt">
-              Every other outdoor brand is selling you a personal record. We make things to wear while sitting on a log,
-              eating a bar you found in a jacket pocket from last October. The mountain has never asked how fast you got
-              there. Neither will we.
+              Most outdoor brands sell you a personal record. We sell a shirt to wear while you sit on a log eating a bar
+              you found in a jacket pocket from last October. The mountain has never asked how fast you got there.
             </p>
             <blockquote>&ldquo;Worst Case Scenario: A Bear Kills You.&rdquo;</blockquote>
           </div>
@@ -73,8 +72,8 @@ export default async function Home() {
       <section style={{ padding: "70px var(--pad) 20px" }}>
         <h2 className="h-mid" style={{ marginBottom: 8 }}>No reviews yet</h2>
         <p className="sub-muted" style={{ marginBottom: 24, maxWidth: "54ch" }}>
-          The store just opened, so there is nothing here but our own opinion, and we are biased. Buy something. If it
-          holds up, tell us and we will put your words here instead of ours.
+          Nobody has bought anything yet. When someone does and has something to say about it, their words go here
+          instead of ours.
         </p>
       </section>
 

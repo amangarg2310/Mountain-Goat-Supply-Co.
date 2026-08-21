@@ -11,9 +11,9 @@ export const MARQUEE = [
 ];
 
 export const TENETS = [
-  { title: "Conversational pace", body: "If you can't finish a sentence, you're doing a different sport. We wish you well." },
+  { title: "Conversational pace", body: "If you can't finish a sentence, you're doing a different sport." },
   { title: "Snacks are gear", body: "Weight is weight. Ours is edible." },
-  { title: "Turning around counts", body: "Nobody has ever asked to see the summit photo. Ask us how we know. Ask us twice and we'll tell you about the time we turned back four hundred metres from the top and had the best afternoon of the year." },
+  { title: "Turning around counts", body: "Nobody has ever asked to see the summit photo." },
   { title: "No PRs", body: "We have never timed anything." },
 ];
 
@@ -33,11 +33,11 @@ export const SIZETABLE = [
 ];
 
 export const FAQS = [
-  { q: "Is this technical apparel?", a: "No. It's cotton. It gets wet and stays wet. We think that's a fine reason to head back early." },
+  { q: "Is this technical apparel?", a: "No. It's cotton. It gets wet and stays wet." },
   { q: "How does it fit?", a: "Relaxed through the body. Size down if you want it closer to the frame. Size up if you're being honest with yourself." },
-  { q: "Will this make me faster?", a: "No. Early results suggest a mild slowing effect at the trailhead." },
-  { q: "Do you ship internationally?", a: "Yes, most places, three to five business days. Slower would have been on brand. We resisted." },
-  { q: "Returns?", a: "Thirty days, unworn, no questions asked. If you wore it and a bear ate it, come tell us the story." },
+  { q: "Will this make me faster?", a: "No." },
+  { q: "Do you ship internationally?", a: "Yes, most places, three to five business days." },
+  { q: "Returns?", a: "Thirty days, unworn, no questions asked. If you wore it and a bear ate it, we want to hear about that." },
 ];
 
 export const LOGO_URL =

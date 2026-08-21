@@ -6,8 +6,8 @@ export default function EmailBox() {
   return (
     <div className="emailbox">
       <div style={{ maxWidth: "46ch" }}>
-        <h2>Get told about new drops</h2>
-        <p>One email when there is something new. We are not organised enough to send more than that.</p>
+        <h2>New shirts, occasionally</h2>
+        <p>One email when there's something new. There is rarely something new.</p>
       </div>
       <form onSubmit={(e) => { e.preventDefault(); setSubbed(true); }}>
         <input type="email" required placeholder="you@email.com" aria-label="Email address" />
