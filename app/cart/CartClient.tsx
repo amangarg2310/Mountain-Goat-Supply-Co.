@@ -50,8 +50,7 @@ export default function CartClient({ book }: { book: PriceBook }) {
           <div className="row"><span>Subtotal</span><span className="v">${subtotal.toFixed(2)}</span></div>
           <hr />
           <p className="note">
-            Shipping and tax are worked out on the next screen, once Fourthwall knows where it is going. We would rather
-            leave them blank than guess at them here.
+            Shipping is free. Tax is worked out on the next screen, once Fourthwall knows where this is going.
           </p>
           <Link href="/checkout" className="btn-butter" style={{ marginTop: 4 }}>Checkout</Link>
         </aside>

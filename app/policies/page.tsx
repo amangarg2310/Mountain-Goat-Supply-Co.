@@ -11,7 +11,7 @@ const SECTIONS = [
     h: "Shipping",
     ps: [
       "Everything is printed when you order it, so nothing sits in a warehouse waiting. Production takes three to five business days, then transit on top of that.",
-      "Shipping is calculated at checkout, once there is a destination to calculate it against. The exact figure appears before you pay.",
+      "Shipping is free. Any duties or taxes are calculated at checkout, once there is a destination to work them out against, and the exact figure appears before you pay.",
       "You'll get a tracking number by email as soon as the order leaves the printer. If it hasn't shown up after a week, that email is the first thing to check, and then us.",
     ],
   },
