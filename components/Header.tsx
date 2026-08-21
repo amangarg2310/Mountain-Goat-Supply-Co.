@@ -19,7 +19,6 @@ export default function Header() {
       <header className="site">
         <Link href="/" className="logo-btn" aria-label="Mountain G.O.A.T Supply Co. home">
           <img src={LOGO_URL} alt="Mountain G.O.A.T Supply Co." />
-          <span className="logo-tag">ELEVATION.<br />SNACKS.<br />REPEAT.</span>
         </Link>
         <nav className="main" aria-label="Main">
           {links.map((l) => (
