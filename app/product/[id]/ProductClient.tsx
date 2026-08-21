@@ -24,8 +24,10 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
 
   const variant = p.variants.find((v) => v.colour === colour && v.size === size);
   const price = variant?.price ?? p.price;
-  const gallery = p.images.slice(0, 6);
-  const hero = gallery[shot] ?? p.images[0];
+  // Gallery follows the selected colour, so the swatch actually changes the shirt.
+  const active = p.colours.find((c) => c.name === colour);
+  const gallery = (active?.images?.length ? active.images : p.images).slice(0, 6);
+  const hero = gallery[Math.min(shot, gallery.length - 1)] ?? gallery[0];
 
   const doAdd = () => {
     if (!variant) return;
@@ -36,7 +38,7 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
       colour,
       size,
       price: variant.price,
-      image: variant.image ?? p.images[0],
+      image: variant.image ?? active?.images?.[0] ?? p.images[0],
     });
     setAdded(true);
     setTimeout(() => setAdded(false), 1800);
@@ -91,7 +93,7 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
                     aria-label={`Color ${c.name}`}
                     aria-pressed={colour === c.name}
                     style={{ background: c.swatch }}
-                    onClick={() => setColour(c.name)}
+                    onClick={() => { setColour(c.name); setShot(0); }}
                   />
                 ))}
               </div>

@@ -44,7 +44,7 @@ type RawProduct = {
 };
 
 /* ---------- app-facing shapes ---------- */
-export type Colour = { name: string; swatch: string; image?: string };
+export type Colour = { name: string; swatch: string; image?: string; images: string[] };
 export type Variant = {
   id: string;
   sku?: string;
@@ -92,15 +92,23 @@ function normalise(raw: RawProduct): Product {
     image: v.images?.[0]?.url,
   }));
 
-  // Distinct colours, preserving Fourthwall's ordering, with a representative photo.
+  // Distinct colours in Fourthwall's order. Each carries its own photo set so
+  // picking a swatch actually swaps the shirt you are looking at.
   const colours: Colour[] = [];
   for (const v of raw.variants ?? []) {
     const nm = v.attributes?.color?.name;
-    if (!nm || colours.some((x) => x.name === nm)) continue;
+    if (!nm) continue;
+    const existing = colours.find((x) => x.name === nm);
+    const urls = (v.images ?? []).map((i) => i.url);
+    if (existing) {
+      for (const u of urls) if (!existing.images.includes(u)) existing.images.push(u);
+      continue;
+    }
     colours.push({
       name: nm,
       swatch: v.attributes?.color?.swatch || "#cccccc",
-      image: v.images?.[0]?.url,
+      image: urls[0],
+      images: urls,
     });
   }
 
