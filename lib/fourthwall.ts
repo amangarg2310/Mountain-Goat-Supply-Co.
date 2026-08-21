@@ -141,21 +141,31 @@ export async function getProducts(force = false): Promise<Product[]> {
   if (!fourthwallEnabled) return [];
   if (!force && cache && Date.now() - cache.at < TTL) return cache.products;
   try {
-    const res = await fetch(
-      `${API}/collections/all/products?storefront_token=${TOKEN}`,
-      // NOTE: the build logs "items over 2MB can not be cached" here. That is
-      // expected and harmless: the payload is ~2.4MB of photo metadata, so it
-      // skips Next's fetch-level data cache. Page-level ISR below still caches
-      // the rendered output, so the API is hit once per revalidation window,
-      // not per request. Do NOT switch this to no-store: that opts / and /shop
-      // out of static generation and refetches 2.4MB on every pageview.
-      // The forced path is only used by the getProduct retry below, so it
-      // cannot opt / or /shop out of static generation.
-      force ? { cache: "no-store" } : { next: { revalidate: 300 } }
-    );
-    if (!res.ok) throw new Error(`FW ${res.status}`);
-    const json = await res.json();
-    const products = (json.results ?? []).map(normalise);
+    // Fourthwall pages this endpoint and defaults to 10 per page. Without an
+    // explicit size and a page loop, the catalog silently truncates the moment
+    // there are more than ten products. Ask for a large page, then follow
+    // hasNextPage in case the ceiling is lower than we asked for.
+    const all: RawProduct[] = [];
+    let page = 0;
+    for (;;) {
+      const url =
+        `${API}/collections/all/products?storefront_token=${TOKEN}` +
+        `&size=100&page=${page}`;
+      const res = await fetch(
+        url,
+        // NOTE: the build logs "items over 2MB can not be cached" here. Expected:
+        // the payload is photo metadata and skips Next's fetch cache. Page-level
+        // ISR still caches the render. Do NOT switch to no-store, that opts /
+        // and /shop out of static generation.
+        force ? { cache: "no-store" } : { next: { revalidate: 300 } }
+      );
+      if (!res.ok) throw new Error(`FW ${res.status}`);
+      const json = await res.json();
+      all.push(...(json.results ?? []));
+      if (!json.paging?.hasNextPage || page > 20) break;
+      page += 1;
+    }
+    const products = all.map(normalise);
     cache = { at: Date.now(), products };
     return products;
   } catch {
@@ -203,4 +213,26 @@ export async function checkoutUrl(
   } catch {
     return null;
   }
+}
+
+/** variantId -> live pricing and labels, for re-pricing a stored cart.
+    The cart keeps identity only; every figure shown comes from here. */
+export async function getPriceBook(): Promise<
+  Record<string, { price: number; compareAt?: number; name: string; colour: string; size: string; image?: string }>
+> {
+  const products = await getProducts();
+  const book: Record<string, { price: number; compareAt?: number; name: string; colour: string; size: string; image?: string }> = {};
+  for (const p of products) {
+    for (const v of p.variants) {
+      book[v.id] = {
+        price: v.price,
+        compareAt: v.compareAt,
+        name: p.name,
+        colour: v.colour,
+        size: v.size,
+        image: v.image ?? p.colours.find((c) => c.name === v.colour)?.images?.[0] ?? p.images[0],
+      };
+    }
+  }
+  return book;
 }

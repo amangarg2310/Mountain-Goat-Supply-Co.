@@ -31,15 +31,7 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
 
   const doAdd = () => {
     if (!variant) return;
-    add({
-      variantId: variant.id,
-      slug: p.slug,
-      name: p.name,
-      colour,
-      size,
-      price: variant.price,
-      image: variant.image ?? active?.images?.[0] ?? p.images[0],
-    });
+    add({ variantId: variant.id, slug: p.slug });
     setAdded(true);
     setTimeout(() => setAdded(false), 1800);
   };

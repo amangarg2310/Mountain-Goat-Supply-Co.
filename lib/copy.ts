@@ -23,6 +23,18 @@ export type Copy = {
 };
 
 export const COPY: Record<string, Copy> = {
+  "wild-places-good-times": {
+    tag: "New",
+    blurb: "Two things that are easier to find than a parking spot.",
+    desc:
+      "Nine colours, which is more decisions than we usually make in a day. Garment-dyed cotton that softens with every wash and every trip you nearly cancelled.",
+  },
+  "g-o-a-t-hiker": {
+    tag: "New",
+    blurb: "Greatest of all time. Lowest of all paces.",
+    desc:
+      "The acronym does the work here. Wear it in front of people who take the sport seriously and see how long it takes them to read it twice.",
+  },
   "worst-case-scenario": {
     tag: "Fan favourite",
     blurb: "A bear kills you. Everything else is fine.",
@@ -90,5 +102,7 @@ export const XSELL: Record<string, string[]> = {
   "mountain-g-o-a-t-essential-tee": ["mountain-g-o-a-t-psychedelic", "the-minimalist"],
   "mountain-g-o-a-t-psychedelic": ["mountain-g-o-a-t-essential-tee", "the-minimalist"],
   "the-minimalist": ["mountain-g-o-a-t-essential-tee", "worst-case-scenario"],
+  "wild-places-good-times": ["g-o-a-t-hiker", "the-minimalist"],
+  "g-o-a-t-hiker": ["mountain-g-o-a-t-essential-tee", "wild-places-good-times"],
 };
 XSELL["worse-case-scenario"] = XSELL["worst-case-scenario"];

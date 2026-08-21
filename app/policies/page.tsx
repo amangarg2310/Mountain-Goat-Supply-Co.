@@ -11,7 +11,7 @@ const SECTIONS = [
     h: "Shipping",
     ps: [
       "Everything is printed when you order it, so nothing sits in a warehouse waiting. Production takes three to five business days, then transit on top of that.",
-      "Shipping is free on orders over $50. Under that it's a flat $7 within the US. International goes to most countries and the exact cost is calculated at checkout.",
+      "Shipping is calculated at checkout, once there is a destination to calculate it against. The exact figure appears before you pay.",
       "You'll get a tracking number by email as soon as the order leaves the printer. If it hasn't shown up after a week, that email is the first thing to check, and then us.",
     ],
   },

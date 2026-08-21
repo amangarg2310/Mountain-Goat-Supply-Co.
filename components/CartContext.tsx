@@ -1,19 +1,16 @@
 "use client";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 
-/** A cart line is a self-contained snapshot taken at add-to-cart time,
-    so cart and checkout never need the catalog in memory. */
-export type Line = {
-  key: string;
-  variantId: string;
-  slug: string;
-  name: string;
-  colour: string;
-  size: string;
-  price: number;
-  image?: string;
-  qty: number;
-};
+/** A cart line stores identity and quantity only. Price, name and image are
+    re-read from the live Fourthwall catalog on render, so a cart left open
+    while prices change never shows a stale figure. */
+export type Line = { key: string; variantId: string; slug: string; qty: number };
+
+/** What the live catalog knows about a variant, keyed by variantId. */
+export type PriceBook = Record<
+  string,
+  { price: number; compareAt?: number; name: string; colour: string; size: string; image?: string }
+>;
 
 type Ctx = {
   cart: Line[];
@@ -31,7 +28,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const raw = JSON.parse(localStorage.getItem("mgsc-cart") || "[]");
-      // Drop any legacy lines from the pre-Fourthwall schema.
       setCart(Array.isArray(raw) ? raw.filter((l) => l && l.variantId) : []);
     } catch {}
     setReady(true);
@@ -51,15 +47,11 @@ export function CartProvider({ children }: { children: ReactNode }) {
     });
   };
   const bump = (key: string, d: number) =>
-    setCart((c) =>
-      c.map((l) => (l.key === key ? { ...l, qty: l.qty + d } : l)).filter((l) => l.qty > 0)
-    );
+    setCart((c) => c.map((l) => (l.key === key ? { ...l, qty: l.qty + d } : l)).filter((l) => l.qty > 0));
   const clear = () => setCart([]);
   const count = cart.reduce((a, l) => a + l.qty, 0);
 
-  return (
-    <CartCtx.Provider value={{ cart, count, add, bump, clear }}>{children}</CartCtx.Provider>
-  );
+  return <CartCtx.Provider value={{ cart, count, add, bump, clear }}>{children}</CartCtx.Provider>;
 }
 
 export function useCart() {
@@ -68,15 +60,21 @@ export function useCart() {
   return ctx;
 }
 
-/** Keep in step with the Fourthwall shipping rule, or the site promises
-    something the hosted checkout will not honour. */
-export const FREE_SHIP = 50;
+/** Price the cart against the live catalog.
 
-export function cartMath(cart: Line[]) {
-  const lines = cart.map((l) => ({ ...l, total: +(l.price * l.qty).toFixed(2) }));
+    Deliberately returns a subtotal and nothing else. Shipping and sales tax
+    both depend on the destination address, which is collected on Fourthwall's
+    checkout, and their cart API exposes neither. Inventing them here means
+    showing a total that changes on the next screen. */
+export function priceCart(cart: Line[], book: PriceBook) {
+  const lines = cart
+    .map((l) => {
+      const v = book[l.variantId];
+      if (!v) return null; // variant pulled from the store since it was added
+      return { ...l, ...v, total: +(v.price * l.qty).toFixed(2) };
+    })
+    .filter((l): l is NonNullable<typeof l> => l !== null);
   const subtotal = +lines.reduce((a, l) => a + l.total, 0).toFixed(2);
-  const ship = subtotal >= FREE_SHIP || subtotal === 0 ? 0 : 7;
-  const tax = +(subtotal * 0.081).toFixed(2);
-  const total = (subtotal + ship + tax).toFixed(2);
-  return { lines, subtotal, ship, tax: tax.toFixed(2), total };
+  const missing = cart.length - lines.length;
+  return { lines, subtotal, missing };
 }

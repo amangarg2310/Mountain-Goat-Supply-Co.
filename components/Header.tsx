@@ -15,7 +15,7 @@ export default function Header() {
   const path = usePathname();
   return (
     <>
-      <div className="topbar">Free shipping over $50 &nbsp;·&nbsp; Printed when you order, ships in 3–5 days</div>
+      <div className="topbar">Printed when you order &nbsp;·&nbsp; Ships in 3–5 days</div>
       <header className="site">
         <Link href="/" className="logo-btn" aria-label="Mountain G.O.A.T Supply Co. home">
           <img src={LOGO_URL} alt="Mountain G.O.A.T Supply Co." />

@@ -1,0 +1,61 @@
+"use client";
+import Link from "next/link";
+import { useCart, priceCart, type PriceBook } from "@/components/CartContext";
+
+export default function CartClient({ book }: { book: PriceBook }) {
+  const { cart, bump } = useCart();
+  const { lines, subtotal, missing } = priceCart(cart, book);
+
+  if (!lines.length)
+    return (
+      <main style={{ padding: "46px var(--pad) 80px", maxWidth: 1080, margin: "0 auto" }}>
+        <h1 className="h-page">Your pack</h1>
+        <div className="empty">
+          <p style={{ margin: "0 0 6px", font: "400 27px/1.2 var(--disp)" }}>Suspiciously light</p>
+          <p style={{ margin: "0 0 22px", fontSize: 16, color: "rgba(51,64,42,.65)" }}>There is nothing in here.</p>
+          <Link href="/shop" className="btn-rust" style={{ padding: "15px 26px", fontSize: 13 }}>Let&rsquo;s fix that</Link>
+        </div>
+      </main>
+    );
+
+  return (
+    <main style={{ padding: "46px var(--pad) 80px", maxWidth: 1080, margin: "0 auto" }}>
+      <h1 className="h-page">Your pack</h1>
+      {missing > 0 ? (
+        <p role="status" className="cartnote">
+          {missing === 1 ? "One item is" : `${missing} items are`} no longer available and {missing === 1 ? "has" : "have"} been removed.
+        </p>
+      ) : null}
+      <div className="cartgrid">
+        <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+          {lines.map((l) => (
+            <div className="lineitem" key={l.key}>
+              <div className="linetone">{l.image ? <img src={l.image} alt={l.name} /> : null}</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
+                <h3 style={{ margin: 0, font: "400 19px/1.15 var(--disp)" }}>{l.name}</h3>
+                <span className="linevariant">{l.colour} · {l.size}</span>
+                <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 6 }}>
+                  <button className="qtybtn" aria-label="Decrease quantity" onClick={() => bump(l.key, -1)}>−</button>
+                  <span style={{ minWidth: 20, textAlign: "center", font: "700 13px/1 var(--mono)" }}>{l.qty}</span>
+                  <button className="qtybtn" aria-label="Increase quantity" onClick={() => bump(l.key, 1)}>+</button>
+                  <button className="removebtn" onClick={() => bump(l.key, -l.qty)}>Remove</button>
+                </div>
+              </div>
+              <span style={{ font: "700 15px/1 var(--mono)" }}>${l.total.toFixed(2)}</span>
+            </div>
+          ))}
+        </div>
+        <aside className="summary">
+          <h2>Summary</h2>
+          <div className="row"><span>Subtotal</span><span className="v">${subtotal.toFixed(2)}</span></div>
+          <hr />
+          <p className="note">
+            Shipping and tax are worked out on the next screen, once Fourthwall knows where it is going. We would rather
+            leave them blank than guess at them here.
+          </p>
+          <Link href="/checkout" className="btn-butter" style={{ marginTop: 4 }}>Checkout</Link>
+        </aside>
+      </div>
+    </main>
+  );
+}
