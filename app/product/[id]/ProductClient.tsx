@@ -127,9 +127,9 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
           </button>
 
           <div className="trust">
-            <div><Star /><span>4.9 average from people who mostly sit down partway up</span></div>
+            <div><Star /><span>Comfort Colors garment-dyed cotton. Softens every wash</span></div>
             <div><Loop /><span>Thirty day returns. The bear clause applies.</span></div>
-            <div><Box /><span>Ships in 3 to 5 days. Sprinting, for us</span></div>
+            <div><Box /><span>Printed when you order. Ships in 3 to 5 days</span></div>
           </div>
 
           <div className="guarantee">

@@ -148,7 +148,7 @@ input:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px rgba(22
 
 .tenets{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin:36px 0 0}
 .tenet{padding:22px;background:var(--card);border:1.5px solid rgba(51,64,42,.18);border-radius:16px}
-.tenet .no{display:block;font:600 10px/1 var(--body);letter-spacing:.01em;color:var(--rust);margin-bottom:10px}
+.tenet .no{display:none}
 .tenet h3{margin:0 0 6px;font:400 20px/1.15 var(--disp)}
 .tenet p{margin:0;font-size:14.5px;line-height:1.55;color:rgba(51,64,42,.68)}
 .bitp{margin:0 0 18px;font-size:19px;line-height:1.7;color:rgba(51,64,42,.8);text-wrap:pretty}
@@ -251,7 +251,6 @@ footer.site{background:var(--pine);color:rgba(254,247,238,.8);padding:56px var(-
 .lbl{font-size:12.5px;letter-spacing:.01em;text-transform:none;font-weight:600}
 .topbar{font-size:12.5px;letter-spacing:.01em;text-transform:none;font-weight:500}
 .guarantee .t{font-size:12.5px;letter-spacing:.01em;text-transform:none}
-.tenet .no{font-size:12px;letter-spacing:.02em;font-family:var(--mono)}
 .specs .k{font-size:13px;letter-spacing:0;text-transform:none}
 th{font-size:12.5px;letter-spacing:.01em;text-transform:none}
 legend{font-size:12.5px;letter-spacing:.01em;text-transform:none}
@@ -296,3 +295,7 @@ legend{font-size:12.5px;letter-spacing:.01em;text-transform:none}
   .hero-copy h1{font-size:clamp(34px,10vw,52px)}
   .hero-copy p{max-width:32ch;font-size:16.5px}
 }
+
+/* Tenets are prose, not a numbered spec sheet. Mono numerals read as template. */
+.tenet .no{display:none}
+.tenets{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}

@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import { useCart, cartMath } from "@/components/CartContext";
+import { useCart, cartMath, FREE_SHIP } from "@/components/CartContext";
 
 export default function Cart() {
   const { cart, bump } = useCart();
   const { lines, subtotal, ship, tax, total } = cartMath(cart);
-  const pct = Math.min(100, Math.round((subtotal / 75) * 100));
+  const pct = Math.min(100, Math.round((subtotal / FREE_SHIP) * 100));
 
   if (!lines.length)
     return (
@@ -16,7 +16,7 @@ export default function Cart() {
           <p style={{ margin: "0 0 22px", fontSize: 16, color: "rgba(51,64,42,.65)" }}>
             That's more or less our whole position. Still.
           </p>
-          <Link href="/shop" className="btn-rust" style={{ padding: "15px 26px", fontSize: 13 }}>Go get something</Link>
+          <Link href="/shop" className="btn-rust" style={{ padding: "15px 26px", fontSize: 13 }}>Let's fix that</Link>
         </div>
       </main>
     );
@@ -53,9 +53,9 @@ export default function Cart() {
             <i style={{ width: `${pct}%` }} />
           </div>
           <p className="note">
-            {subtotal >= 75
+            {subtotal >= FREE_SHIP
               ? "Free shipping unlocked. You have peaked, financially."
-              : `Spend $${(75 - subtotal).toFixed(2)} more for free shipping. No pressure, obviously.`}
+              : `$${(FREE_SHIP - subtotal).toFixed(2)} more for free shipping. No pressure.`}
           </p>
           <div className="row"><span>Subtotal</span><span className="v">${subtotal.toFixed(2)}</span></div>
           <div className="row"><span>Shipping</span><span className="v">{ship === 0 ? "Free" : "$7.00"}</span></div>

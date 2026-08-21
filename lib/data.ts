@@ -11,17 +11,15 @@ export const MARQUEE = [
 ];
 
 export const TENETS = [
-  { no: "01", title: "Conversational pace", body: "If you can't finish a sentence, you're doing a different sport. We wish you well." },
-  { no: "02", title: "Snacks are gear", body: "Weight is weight. Ours is edible. We consider that an advantage." },
-  { no: "03", title: "Turning around counts", body: "Nobody has ever asked to see the summit photo. Ask us how we know." },
-  { no: "04", title: "No PRs", body: "We have never timed anything. Including the making of this website." },
+  { title: "Conversational pace", body: "If you can't finish a sentence, you're doing a different sport. We wish you well." },
+  { title: "Snacks are gear", body: "Weight is weight. Ours is edible." },
+  { title: "Turning around counts", body: "Nobody has ever asked to see the summit photo. Ask us how we know. Ask us twice and we'll tell you about the time we turned back four hundred metres from the top and had the best afternoon of the year." },
+  { title: "No PRs", body: "We have never timed anything." },
 ];
 
-export const REVIEWS = [
-  { stars: "★★★★★", text: "Stopped four times in the first mile. Nobody said a word. The shirt did the explaining.", who: "Dana R." },
-  { stars: "★★★★★", text: "Bought the bear one as a joke. It is a joke. It's also the softest thing I own now.", who: "Marcus T." },
-  { stars: "★★★★☆", text: "Docking a star because my hiking group has started calling me by the shirt instead of my name.", who: "Priya K." },
-];
+/* No reviews yet. The store is new and we are not inventing any.
+   When real ones arrive, they replace this block. */
+export const REVIEWS: { stars: string; text: string; who: string }[] = [];
 
 /* Inches, laid flat. Extended to 4XL to match the live Fourthwall range. */
 export const SIZETABLE = [

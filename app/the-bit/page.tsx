@@ -23,8 +23,7 @@ export default function TheBit() {
       <blockquote className="bitquote">Elevation. Snacks. Repeat.</blockquote>
       <div className="tenets">
         {TENETS.map((t) => (
-          <div className="tenet" key={t.no}>
-            <span className="no">{t.no}</span>
+          <div className="tenet" key={t.title}>
             <h3>{t.title}</h3>
             <p>{t.body}</p>
           </div>

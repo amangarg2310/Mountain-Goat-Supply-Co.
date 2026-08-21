@@ -3,7 +3,6 @@ import Marquee from "@/components/Marquee";
 import Reveal from "@/components/Reveal";
 import EmailBox from "@/components/EmailBox";
 import ProductCard from "@/components/ProductCard";
-import { REVIEWS } from "@/lib/data";
 import { getProducts } from "@/lib/fourthwall";
 
 export const revalidate = 300;
@@ -28,8 +27,8 @@ export default async function Home() {
           <h1>
             Hike now,<br />regret less<br />(maybe).
           </h1>
-          <p>Cotton shirts for people who hike slowly and stop often.</p>
-          <Link href="/shop" className="btn-hero">Shop the shirts</Link>
+          <p>Cotton shirts for slow hikers, frequent sitters, and one goat with strong opinions about snacks.</p>
+          <Link href="/shop" className="btn-hero">Take me to the shirts</Link>
         </div>
       </section>
 
@@ -44,7 +43,7 @@ export default async function Home() {
                 {products.length} design{products.length === 1 ? "" : "s"}. All in stock.
               </p>
             </div>
-            <Link href="/shop" className="btn-hollow">View all&nbsp;&nbsp;→</Link>
+            <Link href="/shop" className="btn-hollow">See the rest&nbsp;&nbsp;→</Link>
           </section>
           <section className="pad" style={{ paddingTop: 24, paddingBottom: 74 }}>
             <div className="grid">{products.slice(0, 4).map((p) => <ProductCard key={p.id} p={p} />)}</div>
@@ -72,21 +71,11 @@ export default async function Home() {
       </section>
 
       <section style={{ padding: "70px var(--pad) 20px" }}>
-        <h2 className="h-mid" style={{ marginBottom: 8 }}>Reviews we didn't edit</h2>
-        <p className="sub-muted" style={{ marginBottom: 28 }}>
-          Verified buyers. Unverified fitness. 4.9 average, and the missing star explains itself below.
+        <h2 className="h-mid" style={{ marginBottom: 8 }}>No reviews yet</h2>
+        <p className="sub-muted" style={{ marginBottom: 24, maxWidth: "54ch" }}>
+          The store just opened, so there is nothing here but our own opinion, and we are biased. Buy something. If it
+          holds up, tell us and we will put your words here instead of ours.
         </p>
-        <div className="revgrid">
-          {REVIEWS.map((r, i) => (
-            <Reveal key={i}>
-              <div className="rev">
-                <span className="stars" aria-label="rating">{r.stars}</span>
-                <p>{r.text}</p>
-                <span className="who">{r.who}</span>
-              </div>
-            </Reveal>
-          ))}
-        </div>
       </section>
 
       <EmailBox />

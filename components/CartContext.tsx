@@ -68,10 +68,14 @@ export function useCart() {
   return ctx;
 }
 
+/** Keep in step with the Fourthwall shipping rule, or the site promises
+    something the hosted checkout will not honour. */
+export const FREE_SHIP = 50;
+
 export function cartMath(cart: Line[]) {
   const lines = cart.map((l) => ({ ...l, total: +(l.price * l.qty).toFixed(2) }));
   const subtotal = +lines.reduce((a, l) => a + l.total, 0).toFixed(2);
-  const ship = subtotal >= 75 || subtotal === 0 ? 0 : 7;
+  const ship = subtotal >= FREE_SHIP || subtotal === 0 ? 0 : 7;
   const tax = +(subtotal * 0.081).toFixed(2);
   const total = (subtotal + ship + tax).toFixed(2);
   return { lines, subtotal, ship, tax: tax.toFixed(2), total };

@@ -27,7 +27,7 @@ export default function Checkout() {
           <p style={{ margin: "0 0 22px", fontSize: 16, color: "rgba(51,64,42,.65)" }}>
             Nothing to check out. Fastest transaction we have ever processed.
           </p>
-          <Link href="/shop" className="btn-rust" style={{ padding: "15px 26px", fontSize: 13 }}>Go get something</Link>
+          <Link href="/shop" className="btn-rust" style={{ padding: "15px 26px", fontSize: 13 }}>Go and get something</Link>
         </div>
       </main>
     );
