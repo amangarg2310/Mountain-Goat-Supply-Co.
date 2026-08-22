@@ -75,6 +75,22 @@ export type Product = {
 let cache: { at: number; products: Product[] } | null = null;
 const TTL = 5 * 60_000;
 
+
+/* Fourthwall descriptions arrive as HTML ("<p>...</p>"). We keep Fourthwall as
+   the source of truth so edits there flow through, but render as plain text:
+   paragraphs become blank-line breaks, entities are decoded, tags dropped. */
+function stripHtml(html: string): string {
+  return html
+    .replace(/<\/(p|div|li|h[1-6])>/gi, "\n\n")
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&").replace(/&nbsp;/g, " ")
+    .replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"')
+    .replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 function guessKind(name: string): "TEE" | "HOODIE" {
   return /hood|crew|sweat/i.test(name) ? "HOODIE" : "TEE";
 }
@@ -124,7 +140,7 @@ function normalise(raw: RawProduct): Product {
     kind: c.kind ?? guessKind(raw.name),
     tag: c.tag,
     blurb: c.blurb,
-    desc: raw.description?.trim() ? raw.description : c.desc,
+    desc: raw.description?.trim() ? stripHtml(raw.description) : c.desc,
     price: prices.length ? Math.min(...prices) : 0,
     compareAt: variants.find((v) => v.compareAt)?.compareAt,
     images: (raw.images ?? []).map((i) => i.url),

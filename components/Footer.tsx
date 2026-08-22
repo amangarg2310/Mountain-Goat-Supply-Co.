@@ -21,7 +21,7 @@ export default function Footer() {
           <span className="lab">Help</span>
           <Link href="/policies">Returns &amp; exchanges</Link>
           <Link href="/policies">Shipping</Link>
-          <a href="mailto:hello@mountaingoathiking.com">Contact a human</a>
+          <a href="/#contact">Contact a human</a>
         </div>
       </div>
       <p className="copyline">© 2026 Mountain G.O.A.T Supply Co. &nbsp;·&nbsp; No summits were reached in the making of this store</p>

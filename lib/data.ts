@@ -17,9 +17,9 @@ export const TENETS = [
   { title: "No PRs", body: "We have never timed anything." },
 ];
 
-/* No reviews yet. The store is new and we are not inventing any.
-   When real ones arrive, they replace this block. */
-export const REVIEWS: { stars: string; text: string; who: string }[] = [];
+export const REVIEWS: { stars: string; text: string; who: string }[] = [
+  { stars: "★★★★★", text: "Love the shirts and colors available. Highly recommended!", who: "Tom D." },
+];
 
 /* Inches, laid flat. Extended to 4XL to match the live Fourthwall range. */
 export const SIZETABLE = [

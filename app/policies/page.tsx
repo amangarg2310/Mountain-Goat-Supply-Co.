@@ -33,7 +33,7 @@ const SECTIONS = [
   {
     h: "Getting hold of us",
     ps: [
-      "hello@mountaingoathiking.com. A real person answers, usually within a day, occasionally from a trailhead car park.",
+      "Use the form at the bottom of the homepage. A real person answers, usually within a day, occasionally from a trailhead car park.",
     ],
   },
 ];

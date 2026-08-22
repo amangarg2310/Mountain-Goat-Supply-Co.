@@ -1,3 +1,4 @@
+import { REVIEWS } from "@/lib/data";
 import Link from "next/link";
 import Marquee from "@/components/Marquee";
 import Reveal from "@/components/Reveal";
@@ -67,11 +68,28 @@ export default async function Home() {
       </section>
 
       <section style={{ padding: "70px var(--pad) 20px" }}>
-        <h2 className="h-mid" style={{ marginBottom: 8 }}>No reviews yet</h2>
-        <p className="sub-muted" style={{ marginBottom: 24, maxWidth: "54ch" }}>
-          Nobody has bought anything yet. When someone does and has something to say about it, their words go here
-          instead of ours.
-        </p>
+        {REVIEWS.length > 0 ? (
+          <>
+            <h2 className="h-mid" style={{ marginBottom: 24 }}>Word from the herd</h2>
+            <div className="revgrid" style={{ marginBottom: 24 }}>
+              {REVIEWS.map((r) => (
+                <figure key={r.who} className="rev" style={{ margin: 0 }}>
+                  <span className="stars" aria-label="5 out of 5 stars">{r.stars}</span>
+                  <p>{r.text}</p>
+                  <figcaption className="who">{r.who}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </>
+        ) : (
+          <>
+            <h2 className="h-mid" style={{ marginBottom: 8 }}>No reviews yet</h2>
+            <p className="sub-muted" style={{ marginBottom: 24, maxWidth: "54ch" }}>
+              Nobody has bought anything yet. When someone does and has something to say about it, their words go here
+              instead of ours.
+            </p>
+          </>
+        )}
       </section>
 
       <EmailBox />

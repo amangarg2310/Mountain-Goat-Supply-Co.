@@ -17,7 +17,12 @@ const Box = () => (
 
 export default function ProductClient({ p, related }: { p: Product; related: Product[] }) {
   const { add } = useCart();
-  const [colour, setColour] = useState(p.colours[0]?.name ?? "Default");
+  // Open on the colour that owns the product's first image, so the page
+  // matches the thumbnail the shopper just clicked (cards render images[0]).
+  const initialColour =
+    p.colours.find((c) => c.images.includes(p.images[0]))?.name ??
+    p.colours[0]?.name ?? "Default";
+  const [colour, setColour] = useState(initialColour);
   const [size, setSize] = useState(p.sizes[2] ?? p.sizes[0] ?? "OS");
   const [shot, setShot] = useState(0);
   const [added, setAdded] = useState(false);
