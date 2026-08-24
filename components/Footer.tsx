@@ -19,8 +19,10 @@ export default function Footer() {
         </div>
         <div className="col">
           <span className="lab">Help</span>
-          <Link href="/policies">Returns &amp; exchanges</Link>
-          <Link href="/policies">Shipping</Link>
+          <Link href="/policies/shipping">Shipping</Link>
+          <Link href="/policies/returns">Returns &amp; refunds</Link>
+          <Link href="/policies/privacy">Privacy</Link>
+          <Link href="/policies/terms">Terms</Link>
           <a href="/#contact">Contact a human</a>
         </div>
       </div>

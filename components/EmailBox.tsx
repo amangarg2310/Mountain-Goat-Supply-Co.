@@ -34,7 +34,7 @@ export default function EmailBox() {
         <p>
           Returns and exchanges start here, as do questions, complaints, shirt ideas and trail
           reports. It all lands in the same inbox and a real person reads it. Thirty days to send
-          something back &mdash; the <a href="/policies">full terms</a> are short.
+          something back &mdash; the <a href="/policies/returns">full terms</a> are short.
         </p>
       </div>
       {status === "sent" ? (
