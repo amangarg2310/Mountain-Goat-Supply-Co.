@@ -19,6 +19,8 @@ export const TENETS = [
 
 export const REVIEWS: { stars: string; text: string; who: string }[] = [
   { stars: "★★★★★", text: "Love the shirts and colors available. Highly recommended!", who: "Tom D." },
+  { stars: "★★★★★", text: "Bought a shirt for my hiking obsessed brother and he loves it! Very high quality and he says he gets lot of compliments", who: "Kalvin G." },
+  { stars: "★★★★★", text: "The design is what caught my attention! Definetely a convo starter shirt.", who: "Kelvin T." },
 ];
 
 /* Inches, laid flat. Extended to 4XL to match the live Fourthwall range. */

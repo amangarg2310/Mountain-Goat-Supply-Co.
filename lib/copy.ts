@@ -23,6 +23,29 @@ export type Copy = {
 };
 
 export const COPY: Record<string, Copy> = {
+  "minimal-black-comfort-colors-tee": {
+    name: "The Quiet One",
+    blurb: "Just the logo. Our most understated opinion.",
+    desc:
+      "One small MGSC mark, centre chest. No goat, no slogan, no bit. For days you want the club without the commentary. Garment-dyed Comfort Colors heavyweight that softens with every wash. Seven colours, and despite the name, most of them are not black.",
+  },
+  "mountain-goat-trail-hiker-tee": {
+    name: "Slow Hiking Society Tee",
+    tag: "New",
+    blurb: "The club where we only hike when our friends force us.",
+    desc:
+      "The official Slow Hiking Society crest: one goat, sunglasses, full pack, zero urgency. No dues, no meetings. If a friend dragged you up a hill this year, you are already a member. Garment-dyed cotton, printed when you order.",
+  },
+  "professional-hiker": {
+    blurb: "Two hundred feet in. Calling it a summit.",
+    desc:
+      "Professional is a strong word. It is, however, on the shirt, and nobody at the trailhead is checking credentials. The crest reads guiding people 20 feet up and back since whenever, which is roughly accurate.",
+  },
+  "coffee-lover": {
+    blurb: "The hike starts after the second cup.",
+    desc:
+      "A goat, a mug, a mountain it has no immediate plans to climb. Caffeine-fuelled peak performance with zero urgency. For hikers whose turnaround point is wherever the thermos runs out.",
+  },
   "wild-places-good-times": {
     tag: "New",
     blurb: "Two things that are easier to find than a parking spot.",

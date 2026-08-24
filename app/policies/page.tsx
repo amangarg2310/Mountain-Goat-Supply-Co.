@@ -18,7 +18,7 @@ const SECTIONS = [
   {
     h: "Returns and exchanges",
     ps: [
-      "Thirty days from delivery, unworn and unwashed, no questions asked. Email us and we'll send a return label.",
+      "Thirty days from delivery, unworn and unwashed, no questions asked. Send us a note through the form on the homepage and we'll send a return label.",
       "If it arrives damaged, misprinted or just isn't what the page said it was, that's on us. Send a photo and we'll replace it or refund you. You don't need to ship the faulty one back.",
       "Sizing exchanges are free once per order. The fit runs relaxed, so if you're between sizes the guide on the Fit page is worth two minutes.",
     ],

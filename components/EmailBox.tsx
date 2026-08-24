@@ -32,8 +32,9 @@ export default function EmailBox() {
       <div style={{ maxWidth: "46ch" }}>
         <h2>Tell us things</h2>
         <p>
-          Questions, complaints, shirt ideas, trail reports. It all lands in the same inbox and a
-          real person reads it.
+          Returns and exchanges start here, as do questions, complaints, shirt ideas and trail
+          reports. It all lands in the same inbox and a real person reads it. Thirty days to send
+          something back &mdash; the <a href="/policies">full terms</a> are short.
         </p>
       </div>
       {status === "sent" ? (
