@@ -320,3 +320,34 @@ legend{font-size:12.5px;letter-spacing:.01em;text-transform:none}
 @media (prefers-reduced-motion: reduce){
   .art img,.pcard:hover .art img{transition:none;transform:scale(1.04)}
 }
+
+/* ---- product card: colour preview ----
+   The card is no longer a single <a>; the image and the text are separate
+   links so the colour dots can sit between them without nesting a button
+   inside an anchor (invalid HTML, and it breaks keyboard activation). */
+.pcard-hit,.pcard-text{display:block;text-decoration:none;color:inherit}
+.art-fade{animation:artin 240ms ease}
+@keyframes artin{from{opacity:.35}to{opacity:1}}
+
+.cdots{display:flex;flex-wrap:wrap;gap:7px;margin-top:2px}
+.cdot{width:15px;height:15px;padding:0;border-radius:999px;cursor:pointer;
+  border:1.5px solid rgba(51,64,42,.28);background-clip:padding-box;
+  transition:transform 140ms ease,border-color 140ms ease;position:relative}
+.cdot::after{content:"";position:absolute;inset:-7px}   /* 29px tap target */
+.cdot:hover,.cdot:focus-visible{transform:scale(1.18)}
+.cdot.on{border-color:var(--rust);transform:scale(1.18)}
+
+/* ---- mobile ----
+   Blurbs were hidden at 640px back when they were placeholder text. They are
+   real copy now and they are the reason a card gets tapped, so they stay. */
+@media (max-width:640px){
+  .pblurb{display:block;font-size:12.5px;line-height:1.45}
+  .art{padding:0}
+  .cdot{width:13px;height:13px}
+  .cdots{gap:6px}
+}
+@media (max-width:400px){
+  .grid{grid-template-columns:1fr;gap:16px}
+  .pname{font-size:19px}
+  .pblurb{font-size:13.5px}
+}
