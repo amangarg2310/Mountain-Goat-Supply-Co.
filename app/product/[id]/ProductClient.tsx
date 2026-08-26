@@ -72,7 +72,6 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
               {p.compareAt ? <span className="cmp" style={{ fontSize: 16 }}>${p.compareAt}.00</span> : null}
               ${price}
             </p>
-            {p.compareAt ? <span className="salebadge">Marked down. Don&rsquo;t ask.</span> : null}
           </div>
           <p className="pd-desc">{p.desc}</p>
 

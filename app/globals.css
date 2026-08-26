@@ -119,7 +119,6 @@ input:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px rgba(22
 .pd-info{display:flex;flex-direction:column;gap:20px;position:sticky;top:100px}
 .pd-desc{margin:0;font-size:17px;line-height:1.65;color:rgba(51,64,42,.78);text-wrap:pretty}
 .pd-price{margin:0;font:700 22px/1 var(--mono)}
-.salebadge{display:inline-block;margin-top:8px;padding:5px 10px;border-radius:999px;background:rgba(168,73,42,.12);color:var(--rust);font:600 9px/1 var(--body);letter-spacing:.01em}
 .lbl{display:block;font:600 10px/1 var(--body);letter-spacing:.01em;color:rgba(51,64,42,.6)}
 .swatch{width:34px;height:34px;border-radius:999px;cursor:pointer;transition:transform 140ms ease;border:2px solid rgba(51,64,42,.25)}
 .swatch:hover{transform:scale(1.12)}
@@ -258,7 +257,6 @@ legend{font-size:12.5px;letter-spacing:.01em;text-transform:none}
 .canoe .cap{font-size:12px;letter-spacing:.01em;text-transform:none}
 .art .ph{font-size:12px;letter-spacing:.01em;text-transform:none}
 .pkind{font-size:12px;letter-spacing:0;text-transform:none;font-family:var(--body)}
-.salebadge{font-size:12px;letter-spacing:.01em;text-transform:none}
 .removebtn{font-size:12.5px;letter-spacing:0;text-transform:none}
 .fgrid .lab{font-size:12.5px;letter-spacing:.01em;text-transform:none}
 .btn-chaos,.btn-rust,.btn-hollow,.btn-forest,.btn-butter,.addbtn{letter-spacing:.01em;text-transform:none;font-family:var(--body);font-weight:600}

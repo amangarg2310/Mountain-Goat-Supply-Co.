@@ -58,7 +58,6 @@ export const COPY: Record<string, Copy> = {
   },
   "mountain-goat-trail-hiker-tee": {
     name: "Slow Hiking Society Tee",
-    tag: "New",
     blurb: "The club where we only hike when our friends force us.",
     desc:
       "The official Slow Hiking Society crest: one goat, sunglasses, full pack, zero urgency. No dues, no meetings. If a friend dragged you up a hill this year, you are already a member. Garment-dyed cotton, printed when you order.",
@@ -74,25 +73,21 @@ export const COPY: Record<string, Copy> = {
       "A goat, a mug, a mountain it has no immediate plans to climb. Caffeine-fuelled peak performance with zero urgency. For hikers whose turnaround point is wherever the thermos runs out.",
   },
   "wild-places-good-times": {
-    tag: "New",
     blurb: "Better with a banjo and a bad decision.",
     desc:
       "Nine colours, which is more decisions than we usually make in a day. Garment-dyed cotton that softens with every wash and every trip you nearly cancelled.",
   },
   "g-o-a-t-hiker": {
-    tag: "New",
     blurb: "Greatest of all time. Lowest of all paces.",
     desc:
       "The acronym does the work here. Wear it in front of people who take the sport seriously and see how long it takes them to read it twice.",
   },
   "worst-case-scenario": {
-    tag: "Fan favourite",
     blurb: "A bear kills you. Everything else is fine.",
     desc:
       "Trail anxiety gets easier once you name the ceiling. Either a bear gets you or it doesn't. Everything under that line is mosquitoes and a wet sock. Two colour print on garment-dyed cotton.",
   },
   "bear-encounter-checklist": {
-    tag: "Bestseller",
     blurb: "Steps you will not remember.",
     desc:
       "Every instruction on here is correct. None of it is retrievable while a bear is looking at you. We printed it anyway so at least the bear gets a copy.",
@@ -103,19 +98,16 @@ export const COPY: Record<string, Copy> = {
       "Two words that have never once worked on anybody. Printed large enough that a friend can point at your chest instead of finishing the sentence.",
   },
   "just-outrun-your-buddy": {
-    tag: "As seen on the goat",
     blurb: "Everyone's plan. Nobody's out loud.",
     desc:
       "You don't need to be fast. You need to be slightly less slow than whoever invited you. Wearing it up front keeps the terms clear at the trailhead.",
   },
   "mountain-g-o-a-t-essential-tee": {
-    tag: "The flagship",
     blurb: "The logo, the goat, the whole argument.",
     desc:
       "Garment-dyed heavyweight cotton. Softens every trip, hides most of a granola bar, and outlasts the enthusiasm that made you buy it. This is the one we actually wear.",
   },
   "mountain-g-o-a-t-psychedelic": {
-    tag: "New",
     blurb: "Hour six. No water. The mountain starts doing things.",
     desc:
       "Somewhere past the fourth false summit the colours go sideways. We had an artist draw what that looks like. Nobody who has finished a long descent has argued with it.",
