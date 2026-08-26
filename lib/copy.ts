@@ -23,6 +23,33 @@ export type Copy = {
 };
 
 export const COPY: Record<string, Copy> = {
+  /* Sincere by design. The artwork is a genuinely nice night sky and the
+     shirt means what it says, so the copy plays it straight. Undercutting
+     your own product with a joke it isn't making just confuses the buyer. */
+  "quiet-moments": {
+    tag: "New",
+    blurb: "No joke on this one. Just a good night sky.",
+    desc:
+      "Look up, get lost, find peace. Stay wild, stay present. We sell a lot of shirts that take the mickey out of hiking, and then there is this one, which does not. Some nights on a trail are exactly as good as people say they are. Garment-dyed cotton, printed when you order.",
+  },
+  "hide-and-seek-champion": {
+    tag: "New",
+    blurb: "Undefeated since 1967. Still only ever photographed blurry.",
+    desc:
+      "Nearly sixty years unbeaten and the only surviving footage is out of focus, which is either evidence of nothing or the greatest defensive performance in the history of the sport. Bigfoot, full pack, mid-stride, going wherever he likes. Printed on garment-dyed cotton.",
+  },
+  "an-honest-mistake-was-made": {
+    tag: "New",
+    blurb: "No charges filed. The bear has moved on.",
+    desc:
+      "The hiker is inside the bear. The bear looks untroubled. The caption declines to assign blame to anybody. If you enjoy the specific comedy of a catastrophic outcome described in the language of a minor clerical error, this is the shirt.",
+  },
+  "this-is-technically-outdoors": {
+    tag: "New",
+    blurb: "A lake counts. The floatie counts. We checked.",
+    desc:
+      "Snorkel mask, rubber duck ring, one goat committing to a swim with no intention of hiking anywhere afterwards. Nobody said the outdoors had to involve elevation. For people whose summer plans peak at a lake and stay there.",
+  },
   "minimal-black-comfort-colors-tee": {
     name: "The Quiet One",
     blurb: "Just the logo. Our most understated opinion.",
@@ -48,7 +75,7 @@ export const COPY: Record<string, Copy> = {
   },
   "wild-places-good-times": {
     tag: "New",
-    blurb: "Two things that are easier to find than a parking spot.",
+    blurb: "Better with a banjo and a bad decision.",
     desc:
       "Nine colours, which is more decisions than we usually make in a day. Garment-dyed cotton that softens with every wash and every trip you nearly cancelled.",
   },
@@ -94,7 +121,7 @@ export const COPY: Record<string, Copy> = {
       "Somewhere past the fourth false summit the colours go sideways. We had an artist draw what that looks like. Nobody who has finished a long descent has argued with it.",
   },
   "the-minimalist": {
-    blurb: "Small print. Same opinion.",
+    blurb: "A trail and no signal. That is the whole plan.",
     desc:
       "For people who want the affiliation without the announcement. Quiet enough for a coffee shop. Legible enough that the right person nods on the way past.",
   },
