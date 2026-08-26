@@ -135,7 +135,8 @@ export const DOCS: Doc[] = [
           "Fourthwall handles our catalogue, checkout, payment and fulfilment, and is the processor for order and payment data. Their own privacy policy governs that handling.",
           "Vercel hosts this site and processes server request logs.",
           "FormSubmit relays contact form submissions to our inbox, which means the contents of a message you send pass through their service on the way to us.",
-          "We do not sell, rent or trade personal information to anybody, and we have no advertising trackers or third party analytics on this site.",
+          "Meta (Facebook) Pixel runs on this site. It records page views and shopping actions and links them to a Meta account where one exists, so we can measure whether our ads work and show ads to people who have visited. It sets its own cookies and sends data to Meta, who act as an independent controller under their own policy.",
+          "We do not sell, rent or trade personal information to anybody.",
         ],
       },
       {
@@ -154,7 +155,8 @@ export const DOCS: Doc[] = [
       {
         h: "Cookies",
         ps: [
-          "This site uses only what it needs to keep your cart working between pages. There are no advertising or profiling cookies. Fourthwall's checkout sets its own cookies once you leave our pages for theirs.",
+          "Two kinds. Functional cookies keep your cart working between pages. Advertising cookies are set by the Meta Pixel described above and are used for ad measurement and retargeting.",
+          "You can block or clear cookies in your browser settings, and you can limit ad targeting in your Meta account under Ad Preferences. Fourthwall's checkout sets its own cookies once you leave our pages for theirs.",
         ],
       },
       {

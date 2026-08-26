@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/components/CartContext";
+import MetaPixel from "@/components/MetaPixel";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://mountaingoathiking.com";
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Hanken+Grotesk:ital,wght@0,300..800;1,400..600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <MetaPixel />
         <CartProvider>
           <Header />
           {children}
