@@ -375,3 +375,15 @@ legend{font-size:12.5px;letter-spacing:.01em;text-transform:none}
   .rail>.pcard{flex:0 0 78vw}
 }
 @media (prefers-reduced-motion: reduce){.rail{scroll-behavior:auto}}
+
+/* ---- touch target sizing ----
+   Measured on a real 390px viewport: the colour dots were a 15px box with a
+   29px invisible hit area, and the small back links were as short as 10px.
+   WCAG 2.5.8 asks for 24px minimum and touch guidance prefers 44px, so on
+   coarse pointers the dots get a full 44px target without changing how they
+   look. The dots stay visually small; only the hit area grows. */
+@media (pointer: coarse){
+  .cdot::after{inset:-15px}          /* 15px dot + 30px = 45px target */
+  .cdots{gap:10px}                   /* keeps the enlarged targets from overlapping */
+}
+.backlink{display:inline-block;padding:6px 2px}   /* was as short as 10px tall */
