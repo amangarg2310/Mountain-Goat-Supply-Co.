@@ -32,9 +32,8 @@ export default function EmailBox() {
       <div style={{ maxWidth: "46ch" }}>
         <h2>Tell us things</h2>
         <p>
-          Something arrived wrong? Start here. So do questions, complaints, shirt ideas and trail
-          reports. It all lands in the same inbox and a real person reads it. The{" "}
-          <a href="/policies/returns">returns policy</a> is short and worth a look first.
+          Questions, shirt ideas, trail reports, or a problem with an order. It all lands in the
+          same inbox and a real person reads it.
         </p>
       </div>
       {status === "sent" ? (

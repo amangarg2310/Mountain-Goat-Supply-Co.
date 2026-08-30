@@ -72,22 +72,15 @@ export const DOCS: Doc[] = [
     title: "Returns and refunds",
     nav: "Returns",
     blurb: "No refunds for change of mind. Anything we got wrong, we fix.",
-    intro: "The short version: check the size guide before you order, and if the shirt turns up wrong, tell us.",
+    intro: "Check the size guide before you order. If the shirt turns up wrong, tell us and we will sort it.",
     updated: UPDATED,
     sections: [
       {
         h: "No refunds",
         ps: [
           "Because our garments are printed to order, we do not accept returns or issue refunds for change of mind, incorrect size selection, or personal preference. Please review the product description and size guide carefully before placing your order.",
-          "If your item arrives damaged, defective, or different from what you ordered, contact us and we will work with you to make it right.",
+          "If your item arrives damaged, defective, or different from what you ordered, contact us through the form on the homepage with a photo and we will work with you to make it right.",
           "Nothing in this policy limits any rights or remedies you may have under applicable consumer protection laws.",
-        ],
-      },
-      {
-        h: "If it arrives wrong",
-        ps: [
-          "Damaged, misprinted, wrong item, wrong size in the packet: that is our error, not yours. Send a photo through the contact form and we will replace it or refund you in full.",
-          "You do not need to ship a faulty item back to us. Keep it, bin it, use it as a rag. Posting it around the country helps nobody.",
         ],
       },
       {
@@ -104,13 +97,6 @@ export const DOCS: Doc[] = [
           "These normal production variations are not considered defects.",
         ],
       },
-      {
-        h: "Wrong address and failed delivery",
-        ps: [
-          "Please make sure your shipping address is correct before placing your order. We are not responsible for orders that are delayed, returned or undeliverable because the address given was incorrect or incomplete, or because a package was not collected.",
-          "If an order is returned to sender, additional shipping charges may apply before it can be sent again.",
-        ],
-      },
     ],
   },
   {
@@ -119,7 +105,7 @@ export const DOCS: Doc[] = [
     nav: "Privacy",
     blurb: "What we collect, who touches it, how to make us delete it.",
     intro:
-      "Short version: we collect what an order needs and a message needs, and nothing is sold to anybody.",
+      "We collect what an order needs and what a message needs. None of it is sold to anybody.",
     updated: UPDATED,
     sections: [
       {
@@ -131,9 +117,9 @@ export const DOCS: Doc[] = [
       {
         h: "What we collect",
         ps: [
-          "If you place an order: your name, delivery address, email and order contents. Payment card details are entered on Fourthwall's checkout and are never transmitted to or stored by this website.",
-          "If you use the contact form: the message you write, and your email address if you choose to provide one so we can reply.",
-          "If you simply browse: standard server request data such as IP address, browser type and pages requested, logged by our hosting provider for security and reliability.",
+          "When you place an order we receive your name, delivery address, email and order contents. Payment card details are entered on Fourthwall's checkout and are never transmitted to or stored by this website.",
+          "When you use the contact form we receive the message you write, plus your email address if you choose to give one so we can reply.",
+          "When you simply browse, our hosting provider logs standard request data such as IP address, browser type and pages requested, for security and reliability.",
         ],
       },
       {

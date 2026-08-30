@@ -26,7 +26,7 @@ export default function Footer() {
           <a href="/#contact">Contact a human</a>
         </div>
       </div>
-      <p className="copyline">© 2026 Mountain G.O.A.T Supply Co. &nbsp;·&nbsp; No summits were reached in the making of this store</p>
+      <p className="copyline">© 2026 1573809 B.C. LTD., trading as Mountain G.O.A.T Supply Co. &nbsp;·&nbsp; No summits were reached in the making of this store</p>
     </footer>
   );
 }

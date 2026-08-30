@@ -67,17 +67,18 @@ export const COPY: Record<string, Copy> = {
   "slow-hiking-society": {
     blurb: "The club where we only hike when our friends force us.",
     desc:
-      "The official Slow Hiking Society crest: one goat, sunglasses, full pack, zero urgency. No dues, no meetings. If a friend dragged you up a hill this year, you are already a member. Garment-dyed cotton, printed when you order.",
+      "<p>The official Slow Hiking Society crest. One goat, sunglasses, full pack, zero urgency. The club where we only hike when our friends force us.</p><p>No dues, no meetings, no minimum pace. If somebody dragged you up a hill this year, you are already a member. Garment-dyed Comfort Colors cotton.</p>",
   },
   "professional-hiker": {
     blurb: "Two hundred feet in. Calling it a summit.",
     desc:
-      "Professional is a strong word. It is, however, on the shirt, and nobody at the trailhead is checking credentials. The crest reads guiding people 20 feet up and back since whenever, which is roughly accurate.",
+      "<p>A certified professional hiker, according to the only body that issues the certificate, which is us.</p><p>Professional is a strong word. It is, however, on the shirt, and nobody at the trailhead is checking credentials. Garment-dyed Comfort Colors cotton.</p>",
   },
   "coffee-lover": {
-    blurb: "The hike starts after the second cup.",
+    blurb:
+      "Snacks first. Summits later. Possibly never.",
     desc:
-      "A goat, a mug, a mountain it has no immediate plans to climb. Caffeine-fuelled peak performance with zero urgency. For hikers whose turnaround point is wherever the thermos runs out.",
+      "<p>Snacks first, summits later. The goat has a mug, a view and no intention of moving.</p><p>For hikers whose real turnaround point is wherever the thermos runs out. Garment-dyed Comfort Colors cotton.</p>",
   },
   "wild-places-good-times": {
     blurb: "Better with a banjo and a bad decision.",
@@ -85,9 +86,10 @@ export const COPY: Record<string, Copy> = {
       "Nine colours, which is more decisions than we usually make in a day. Garment-dyed cotton that softens with every wash and every trip you nearly cancelled.",
   },
   "g-o-a-t-hiker": {
-    blurb: "Greatest of all time. Lowest of all paces.",
+    blurb:
+      "Climbs things it shouldn't. Snacks aggressively.",
     desc:
-      "The acronym does the work here. Wear it in front of people who take the sport seriously and see how long it takes them to read it twice.",
+      "<p>A straight dictionary entry for a kind of hiker everybody has met. Climbs things they shouldn't, snacks aggressively, stands on ledges nobody asked them to stand on.</p><p>If you recognise yourself in the definition, the shirt is not an accusation. It is closer to a name tag. Garment-dyed Comfort Colors cotton.</p>",
   },
   "worst-case-scenario": {
     blurb: "A bear kills you. Everything else is fine.",
@@ -95,14 +97,16 @@ export const COPY: Record<string, Copy> = {
       "Trail anxiety gets easier once you name the ceiling. Either a bear gets you or it doesn't. Everything under that line is mosquitoes and a wet sock. Two colour print on garment-dyed cotton.",
   },
   "bear-encounter-checklist": {
-    blurb: "Steps you will not remember.",
+    blurb:
+      "Four steps. The last two are just regret.",
     desc:
-      "Every instruction on here is correct. None of it is retrievable while a bear is looking at you. We printed it anyway so at least the bear gets a copy.",
+      "<p>Stay calm. Back away. Question your life choices. Remember that you chose hiking.</p><p>The bear is holding the clipboard, which tells you who set the agenda. Verdict at the bottom of the list reads probably fine. Garment-dyed Comfort Colors cotton.</p>",
   },
   "bear-safety-stay-calm": {
-    blurb: "The advice is stay calm. That's the whole advice.",
+    blurb:
+      "Sound advice, right up until the second half.",
     desc:
-      "Two words that have never once worked on anybody. Printed large enough that a friend can point at your chest instead of finishing the sentence.",
+      "<p>The shirt opens with real bear safety guidance and then quietly finishes the thought. Panicking, it explains, only makes your last few minutes worse.</p><p>Correct in every particular and comforting in none of them. Garment-dyed Comfort Colors cotton.</p>",
   },
   "just-outrun-your-buddy": {
     blurb: "Everyone's plan. Nobody's out loud.",
@@ -120,9 +124,10 @@ export const COPY: Record<string, Copy> = {
       "Somewhere past the fourth false summit the colours go sideways. We had an artist draw what that looks like. Nobody who has finished a long descent has argued with it.",
   },
   "the-minimalist": {
-    blurb: "A trail and no signal. That is the whole plan.",
+    blurb:
+      "The one with nothing written on it.",
     desc:
-      "For people who want the affiliation without the announcement. Quiet enough for a coffee shop. Legible enough that the right person nods on the way past.",
+      "<p>Line art mountains, a small sun, a path heading off somewhere. No slogan, no punchline, no opinion.</p><p>We had to make one eventually. Wear it on days you would rather not explain a shirt to anybody. Garment-dyed Comfort Colors cotton.</p>",
   },
 };
 
