@@ -6,7 +6,7 @@
 
    Rules that keep this from sounding generated:
    - Not every line is a punchline. Some are just facts.
-   - No trailing ", which ..." ironic qualifiers.
+   - No trailing ", which .." ironic qualifiers.
    - Vary length. Short. Then something longer that earns it.
 
    Keyed by Fourthwall slug. Add a product in Fourthwall and it
@@ -38,7 +38,7 @@ export const COPY: Record<string, Copy> = {
     tag: "New",
     blurb: "No joke on this one. Just a good night sky.",
     desc:
-      "Look up, get lost, find peace. Stay wild, stay present. We sell a lot of shirts that take the mickey out of hiking, and then there is this one, which does not. Some nights on a trail are exactly as good as people say they are. Garment-dyed cotton, printed when you order.",
+      "Look up, get lost, find peace. Stay wild, stay present. We sell a lot of shirts that take the mickey out of hiking, and then there is this one, which does not. Some nights on a trail are exactly as good as people say they are. Garment-dyed Comfort Colors cotton.",
   },
   "hide-and-seek-champion": {
     tag: "New",
@@ -65,6 +65,7 @@ export const COPY: Record<string, Copy> = {
       "One small MGSC mark, centre chest. No goat, no slogan, no bit. For days you want the club without the commentary. Garment-dyed Comfort Colors heavyweight that softens with every wash. Seven colours, and despite the name, most of them are not black.",
   },
   "slow-hiking-society": {
+    tag: "Staff pick",
     blurb: "The club where we only hike when our friends force us.",
     desc:
       "<p>The official Slow Hiking Society crest. One goat, sunglasses, full pack, zero urgency. The club where we only hike when our friends force us.</p><p>No dues, no meetings, no minimum pace. If somebody dragged you up a hill this year, you are already a member. Garment-dyed Comfort Colors cotton.</p>",
@@ -81,6 +82,7 @@ export const COPY: Record<string, Copy> = {
       "<p>Snacks first, summits later. The goat has a mug, a view and no intention of moving.</p><p>For hikers whose real turnaround point is wherever the thermos runs out. Garment-dyed Comfort Colors cotton.</p>",
   },
   "wild-places-good-times": {
+    tag: "Staff pick",
     blurb: "Better with a banjo and a bad decision.",
     desc:
       "Nine colours, which is more decisions than we usually make in a day. Garment-dyed cotton that softens with every wash and every trip you nearly cancelled.",
@@ -114,6 +116,7 @@ export const COPY: Record<string, Copy> = {
       "You don't need to be fast. You need to be slightly less slow than whoever invited you. Wearing it up front keeps the terms clear at the trailhead.",
   },
   "mountain-g-o-a-t-essential-tee": {
+    tag: "Staff pick",
     blurb: "The logo, the goat, the whole argument.",
     desc:
       "Garment-dyed heavyweight cotton. Softens every trip, hides most of a granola bar, and outlasts the enthusiasm that made you buy it. This is the one we actually wear.",
@@ -124,6 +127,7 @@ export const COPY: Record<string, Copy> = {
       "Somewhere past the fourth false summit the colours go sideways. We had an artist draw what that looks like. Nobody who has finished a long descent has argued with it.",
   },
   "the-minimalist": {
+    tag: "Staff pick",
     blurb:
       "The one with nothing written on it.",
     desc:

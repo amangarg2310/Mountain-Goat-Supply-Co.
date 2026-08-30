@@ -68,7 +68,15 @@ export async function POST(req: Request) {
       if (!sent) console.error("[contact] relay returned non-JSON:", text.slice(0, 200));
     }
 
-    return NextResponse.json({ ok: sent }, { status: sent ? 200 : 502 });
+    // Temporary diagnostic. GET /api/contact?debug=1 style probing is not
+    // enough because the failure only shows on a real POST, so the upstream
+    // reason is echoed back when ?debug=1 is present on the request URL.
+    // Remove this once the relay is confirmed working.
+    const debug = new URL(req.url).searchParams.get("debug") === "1";
+    return NextResponse.json(
+      debug ? { ok: sent, upstreamStatus: res.status, upstream: text.slice(0, 300) } : { ok: sent },
+      { status: sent ? 200 : 502 },
+    );
   } catch (err) {
     console.error("[contact] relay unreachable:", err);
     return NextResponse.json({ ok: false, error: "unreachable" }, { status: 502 });
