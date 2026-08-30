@@ -349,3 +349,29 @@ legend{font-size:12.5px;letter-spacing:.01em;text-transform:none}
   .pname{font-size:19px}
   .pblurb{font-size:13.5px}
 }
+
+/* ---- homepage product rail ----
+   Native scroll with snap points rather than a transform carousel, so swipe,
+   trackpad, keyboard and screen readers all work without custom handling.
+   Arrows only nudge scrollLeft. */
+.rail-wrap{position:relative}
+.rail{display:flex;gap:26px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:4px var(--pad) 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.rail>.pcard{flex:0 0 268px;scroll-snap-align:start}
+.rail:focus-visible{outline:2px solid var(--rust);outline-offset:4px;border-radius:16px}
+
+.rail-arrow{position:absolute;top:38%;z-index:5;width:44px;height:44px;border-radius:999px;
+  display:grid;place-items:center;cursor:pointer;font:400 26px/1 var(--body);
+  background:var(--card);color:var(--forest);border:1.5px solid rgba(51,64,42,.22);
+  box-shadow:0 2px 5px rgba(35,42,28,.08),0 10px 22px rgba(35,42,28,.10);
+  transition:transform 140ms ease,opacity 140ms ease}
+.rail-arrow.left{left:calc(var(--pad) - 22px)}
+.rail-arrow.right{right:calc(var(--pad) - 22px)}
+.rail-arrow:hover:not(:disabled){transform:scale(1.08)}
+.rail-arrow:disabled{opacity:0;pointer-events:none}
+@media (max-width:640px){
+  .rail-arrow{display:none}          /* thumbs already swipe */
+  .rail>.pcard{flex:0 0 78vw}
+}
+@media (prefers-reduced-motion: reduce){.rail{scroll-behavior:auto}}

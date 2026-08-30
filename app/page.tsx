@@ -3,13 +3,19 @@ import Link from "next/link";
 import Marquee from "@/components/Marquee";
 import Reveal from "@/components/Reveal";
 import EmailBox from "@/components/EmailBox";
-import ProductCard from "@/components/ProductCard";
+import Carousel from "@/components/Carousel";
 import { getProducts } from "@/lib/fourthwall";
 
 export const revalidate = 300;
 
 export default async function Home() {
   const products = await getProducts();
+  // Staff picks lead the rail; the rest keep the order Fourthwall gives us.
+  const ordered = [
+    ...products.filter((p) => p.tag === "Staff pick"),
+    ...products.filter((p) => p.tag !== "Staff pick"),
+  ];
+
   return (
     <main>
       <section className="hero">
@@ -43,8 +49,8 @@ export default async function Home() {
             </div>
             <Link href="/shop" className="btn-hollow">See the whole herd&nbsp;&nbsp;→</Link>
           </section>
-          <section className="pad" style={{ paddingTop: 24, paddingBottom: 74 }}>
-            <div className="grid">{products.slice(0, 4).map((p) => <ProductCard key={p.id} p={p} />)}</div>
+          <section style={{ paddingTop: 24, paddingBottom: 74 }}>
+            <Carousel products={ordered} />
           </section>
         </>
       ) : null}
@@ -54,8 +60,9 @@ export default async function Home() {
           <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
             <h2>The back of the pack</h2>
             <p className="txt">
-              Most outdoor brands sell you a personal record. We sell a shirt to wear while you sit on a log eating a bar
-              you found in a jacket pocket from last October. The mountain has never asked how fast you got there.
+              Other outdoor brands are very interested in how fast you did it. We would rather sell you something to
+              sit on a log in, eating a granola bar you found in a jacket pocket from last October. It was still
+              fine, by the way.
             </p>
             <blockquote>&ldquo;Worst Case Scenario: A Bear Kills You.&rdquo;</blockquote>
           </div>

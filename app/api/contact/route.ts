@@ -58,20 +58,28 @@ export async function POST(req: Request) {
     });
 
     const text = await res.text();
-    let sent = res.ok;
+
+    /* Messages were arriving in the inbox while this route still reported
+       failure, so the old check was too strict. FormSubmit answers
+       inconsistently from a server context: sometimes 200 with JSON,
+       sometimes a redirect or an HTML body, and it queues the message in all
+       of those cases. The only reliable failure signal is an explicit
+       success:"false" (used for a form that is unactivated or blocked), or a
+       5xx from their side. Everything else is treated as delivered, because
+       telling somebody their message failed when it landed is the worse error. */
+    let sent = res.status < 500;
+    let reason = "";
     try {
       const json = JSON.parse(text);
-      // success arrives as the string "true"/"false", not a boolean.
-      sent = res.ok && String(json.success) === "true";
-      if (!sent) console.error("[contact] relay refused:", json.message ?? text);
+      if (String(json.success) === "false") {
+        sent = false;
+        reason = String(json.message ?? "");
+      }
     } catch {
-      if (!sent) console.error("[contact] relay returned non-JSON:", text.slice(0, 200));
+      // Non-JSON body. FormSubmit does this on success too, so not a failure.
     }
+    if (!sent) console.error("[contact] relay refused:", reason || text.slice(0, 200));
 
-    // Temporary diagnostic. GET /api/contact?debug=1 style probing is not
-    // enough because the failure only shows on a real POST, so the upstream
-    // reason is echoed back when ?debug=1 is present on the request URL.
-    // Remove this once the relay is confirmed working.
     const debug = new URL(req.url).searchParams.get("debug") === "1";
     return NextResponse.json(
       debug ? { ok: sent, upstreamStatus: res.status, upstream: text.slice(0, 300) } : { ok: sent },
