@@ -32,9 +32,9 @@ export default function EmailBox() {
       <div style={{ maxWidth: "46ch" }}>
         <h2>Tell us things</h2>
         <p>
-          Returns and exchanges start here, as do questions, complaints, shirt ideas and trail
-          reports. It all lands in the same inbox and a real person reads it. Thirty days to send
-          something back &mdash; the <a href="/policies/returns">full terms</a> are short.
+          Something arrived wrong? Start here. So do questions, complaints, shirt ideas and trail
+          reports. It all lands in the same inbox and a real person reads it. The{" "}
+          <a href="/policies/returns">returns policy</a> is short and worth a look first.
         </p>
       </div>
       {status === "sent" ? (
@@ -70,8 +70,9 @@ export default function EmailBox() {
             </button>
           </div>
           {status === "error" ? (
-            <p style={{ margin: 0, fontSize: 14, color: "#a63c22" }}>
-              That didn&rsquo;t send. Give it another go in a minute.
+            <p style={{ margin: 0, fontSize: 14, color: "#a63c22", maxWidth: "44ch" }}>
+              That didn&rsquo;t send, and it is our end, not yours. Try again shortly, or reach us
+              through <a href="https://mountain-goat-supply-co-shop.fourthwall.com/contact" target="_blank" rel="noopener noreferrer">our Fourthwall shop</a> in the meantime.
             </p>
           ) : null}
         </form>

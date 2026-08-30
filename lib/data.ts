@@ -38,8 +38,8 @@ export const FAQS = [
   { q: "Is this technical apparel?", a: "No. It's cotton. It gets wet and stays wet." },
   { q: "How does it fit?", a: "Relaxed through the body. Size down if you want it closer to the frame. Size up if you're being honest with yourself." },
   { q: "Will this make me faster?", a: "No." },
-  { q: "Do you ship internationally?", a: "Yes, most places, three to five business days." },
-  { q: "Returns?", a: "Thirty days, unworn, no questions asked. If you wore it and a bear ate it, we want to hear about that." },
+  { q: "Do you ship internationally?", a: "Yes, most places. International takes longer than the usual eight to ten business days." },
+  { q: "Returns?", a: "If it turns up damaged, defective or not what you ordered, we fix it. We cannot take one back over sizing or a change of heart, so give the size guide a look first." },
 ];
 
 export const LOGO_URL =

@@ -8,10 +8,9 @@
    cannot. A refund policy that is trying to be funny is a refund
    policy nobody trusts.
 
-   >>> BEFORE THIS IS TRULY LIVE, replace every [BRACKETED] value.
-   They are deliberately obvious so they cannot ship unnoticed.
-   A privacy policy or terms page naming no legal entity and no
-   jurisdiction is not enforceable and looks unserious.
+   >>> Operating entity and jurisdiction are set from the company's
+   incorporation. A registered business address is still worth adding
+   to the privacy page if the company ever registers one publicly.
    ============================================================ */
 
 export type Doc = {
@@ -24,10 +23,9 @@ export type Doc = {
   sections: { h: string; ps: string[] }[];
 };
 
-const UPDATED = "23 August 2026";
-const ENTITY = "[LEGAL ENTITY NAME]";
-const ADDRESS = "[BUSINESS ADDRESS]";
-const JURISDICTION = "[STATE/COUNTRY]";
+const UPDATED = "30 August 2026";
+const ENTITY = "1573809 B.C. LTD.";
+const JURISDICTION = "British Columbia, Canada";
 
 export const DOCS: Doc[] = [
   {
@@ -48,22 +46,23 @@ export const DOCS: Doc[] = [
       {
         h: "How long it takes",
         ps: [
-          "Every shirt is printed after you order it, so nothing sits in a warehouse waiting to be picked. Production takes three to five business days.",
-          "Transit is on top of production. Domestic orders typically arrive within a week of shipping. International runs longer and varies more than we can usefully promise.",
-          "Busy periods, holidays and the occasional printer backlog stretch these numbers. If yours is running late we would rather tell you than let you refresh a tracking page.",
+          "Most orders arrive within eight to ten business days.",
+          "International orders run longer and vary more than we can usefully promise. Busy periods and holidays stretch these numbers too.",
+          "If yours is running late we would rather tell you than let you refresh a tracking page.",
         ],
       },
       {
         h: "Tracking",
         ps: [
-          "A tracking number is emailed the moment the order leaves the printer. If nothing has arrived and nothing has moved after seven days, get in touch and we will chase it.",
+          "A tracking number is emailed as soon as your order is on its way. If nothing has arrived and nothing has moved after ten business days, get in touch and we will chase it.",
           "Carriers occasionally mark a parcel delivered a day or two before it actually turns up. If yours says delivered and it is not there, give it forty eight hours before assuming the worst.",
         ],
       },
       {
-        h: "Wrong address",
+        h: "Wrong address and failed delivery",
         ps: [
-          "We can change an address while the order is still in production. Once it ships, we cannot. If a parcel comes back to us as undeliverable we will reship it once at no cost.",
+          "Please make sure your shipping address is correct before placing your order. We are not responsible for orders that are delayed, returned or undeliverable because the address given was incorrect or incomplete, or because a package was not collected.",
+          "If an order is returned to sender, additional shipping charges may apply before it can be sent again.",
         ],
       },
     ],
@@ -72,15 +71,16 @@ export const DOCS: Doc[] = [
     slug: "returns",
     title: "Returns and refunds",
     nav: "Returns",
-    blurb: "Thirty days. No interrogation.",
-    intro: "If the shirt is wrong, we fix it. If you simply do not want it, we still fix it.",
+    blurb: "No refunds for change of mind. Anything we got wrong, we fix.",
+    intro: "The short version: check the size guide before you order, and if the shirt turns up wrong, tell us.",
     updated: UPDATED,
     sections: [
       {
-        h: "The window",
+        h: "No refunds",
         ps: [
-          "Thirty days from delivery. Unworn, unwashed, still wearable by somebody else. Start it through the contact form and we will send a return label and instructions.",
-          "Refunds go back to the original payment method once the return arrives. Banks usually take a further three to five business days to show it.",
+          "Because our garments are printed to order, we do not accept returns or issue refunds for change of mind, incorrect size selection, or personal preference. Please review the product description and size guide carefully before placing your order.",
+          "If your item arrives damaged, defective, or different from what you ordered, contact us and we will work with you to make it right.",
+          "Nothing in this policy limits any rights or remedies you may have under applicable consumer protection laws.",
         ],
       },
       {
@@ -91,17 +91,24 @@ export const DOCS: Doc[] = [
         ],
       },
       {
-        h: "Exchanges",
+        h: "Cancellations",
         ps: [
-          "One free size exchange per order. The fit runs relaxed, so if you are between sizes the measurements on each product page are worth the two minutes.",
-          "Colour and design swaps count as a return followed by a new order, because each shirt is printed individually.",
+          "Orders enter production shortly after they are placed and generally cannot be cancelled or changed once production has begun.",
+          "If you spot a mistake immediately after ordering, message us straight away and we will tell you honestly whether it is still possible to catch it.",
         ],
       },
       {
-        h: "What we cannot take back",
+        h: "Print and colour variations",
         ps: [
-          "Items worn, washed or altered, and anything past the thirty day window. Print on demand means a returned shirt cannot be resold, so this is where the line has to sit.",
-          "Gift cards, if we ever sell them, are non-refundable.",
+          "Our products are printed to order, so minor variations in print placement, colour, scale and appearance may occur from one item to another. Colours may also appear slightly different depending on your screen settings and the garment material.",
+          "These normal production variations are not considered defects.",
+        ],
+      },
+      {
+        h: "Wrong address and failed delivery",
+        ps: [
+          "Please make sure your shipping address is correct before placing your order. We are not responsible for orders that are delayed, returned or undeliverable because the address given was incorrect or incomplete, or because a package was not collected.",
+          "If an order is returned to sender, additional shipping charges may apply before it can be sent again.",
         ],
       },
     ],
@@ -118,7 +125,7 @@ export const DOCS: Doc[] = [
       {
         h: "Who we are",
         ps: [
-          `Mountain G.O.A.T Supply Co., operated by ${ENTITY}, ${ADDRESS}. We run mountaingoathiking.com and are the data controller for the information described here.`,
+          `Mountain G.O.A.T Supply Co. is operated by ${ENTITY}, a company incorporated in ${JURISDICTION}. We run mountaingoathiking.com and are the organisation responsible for the information described here.`,
         ],
       },
       {
@@ -184,7 +191,7 @@ export const DOCS: Doc[] = [
       {
         h: "Agreement",
         ps: [
-          `By using mountaingoathiking.com or placing an order you agree to these terms. The site is operated by ${ENTITY} ("we", "us"). If you do not agree to them, please do not use the site.`,
+          `By using mountaingoathiking.com or placing an order you agree to these terms. The site is operated by ${ENTITY} ("we", "us"), incorporated in ${JURISDICTION}. If you do not agree to them, please do not use the site.`,
         ],
       },
       {

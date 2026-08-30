@@ -26,6 +26,14 @@ export const COPY: Record<string, Copy> = {
   /* Sincere by design. The artwork is a genuinely nice night sky and the
      shirt means what it says, so the copy plays it straight. Undercutting
      your own product with a joke it isn't making just confuses the buyer. */
+  /* The design reads I LOVE SEEING BIG NATURALS over a mountain range. The
+     joke only works if the copy plays it completely straight, so it does. */
+  "big-naturals": {
+    tag: "New",
+    blurb: "It's the mountains. Obviously it's the mountains.",
+    desc:
+      "<p>A wide valley, a calm lake, two extremely large mountains. That is the whole picture and we stand by it.</p><p>If somebody reads something else into it, that is a them problem, and you get to say so with a completely straight face. Garment-dyed Comfort Colors cotton in nine colours.</p>",
+  },
   "quiet-moments": {
     tag: "New",
     blurb: "No joke on this one. Just a good night sky.",
@@ -56,8 +64,7 @@ export const COPY: Record<string, Copy> = {
     desc:
       "One small MGSC mark, centre chest. No goat, no slogan, no bit. For days you want the club without the commentary. Garment-dyed Comfort Colors heavyweight that softens with every wash. Seven colours, and despite the name, most of them are not black.",
   },
-  "mountain-goat-trail-hiker-tee": {
-    name: "Slow Hiking Society Tee",
+  "slow-hiking-society": {
     blurb: "The club where we only hike when our friends force us.",
     desc:
       "The official Slow Hiking Society crest: one goat, sunglasses, full pack, zero urgency. No dues, no meetings. If a friend dragged you up a hill this year, you are already a member. Garment-dyed cotton, printed when you order.",

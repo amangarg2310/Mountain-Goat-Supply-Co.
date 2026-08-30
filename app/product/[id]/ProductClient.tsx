@@ -126,13 +126,13 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
 
           <div className="trust">
             <div><Star /><span>Comfort Colors garment-dyed cotton. Softens every wash</span></div>
-            <div><Loop /><span>Thirty day returns. The bear clause applies.</span></div>
-            <div><Box /><span>Printed when you order. Ships in 3 to 5 days</span></div>
+            <div><Loop /><span>Arrives wrong, we make it right.</span></div>
+            <div><Box /><span>Free shipping. Arrives in 8 to 10 business days.</span></div>
           </div>
 
           <div className="guarantee">
             <span className="t">If something goes wrong</span>
-            <p>Damaged, defective or just wrong. Full refund inside 30 days. A real person answers, usually the one who feeds the goat.</p>
+            <p>Damaged, defective or not what you ordered: we replace it or refund it in full. Check the size guide before ordering, though, since we cannot take a shirt back over sizing. A real person answers, usually the one who feeds the goat.</p>
           </div>
 
           {p.details.length ? (
