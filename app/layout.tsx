@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { CartProvider } from "@/components/CartContext";
 import MetaPixel from "@/components/MetaPixel";
+import Analytics from "@/components/Analytics";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://mountaingoathiking.com";
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <MetaPixel />
+        <Analytics />
         <CartProvider>
           <Header />
           {children}

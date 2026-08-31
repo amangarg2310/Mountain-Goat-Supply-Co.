@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { Product } from "@/lib/fourthwall";
 import { useCart } from "@/components/CartContext";
 import ProductCard, { ArtBox } from "@/components/ProductCard";
+import { trackAddToCart, trackViewItem } from "@/lib/track";
 
 const Star = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="#E0B54F" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.8 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6z"/></svg>
@@ -34,8 +35,14 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
   const gallery = (active?.images?.length ? active.images : p.images).slice(0, 6);
   const hero = gallery[Math.min(shot, gallery.length - 1)] ?? gallery[0];
 
+  useEffect(() => {
+    trackViewItem({ id: p.id, name: p.name, price: p.price });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [p.id]);
+
   const doAdd = () => {
     if (!variant) return;
+    trackAddToCart({ id: p.id, name: p.name, price, qty: 1 });
     add({ variantId: variant.id, slug: p.slug });
     setAdded(true);
     setTimeout(() => setAdded(false), 1800);

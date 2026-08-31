@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useCart, priceCart, type PriceBook } from "@/components/CartContext";
 import { checkoutUrl } from "@/lib/fourthwall";
+import { trackBeginCheckout } from "@/lib/track";
 
 export default function CheckoutClient({ book }: { book: PriceBook }) {
   const { cart, count } = useCart();
@@ -13,8 +14,12 @@ export default function CheckoutClient({ book }: { book: PriceBook }) {
   const go = async () => {
     setBusy(true);
     setErr(null);
+    // The moment of handoff to Fourthwall. This event minus completed
+    // purchases is the abandoned checkout number, so it fires before the
+    // redirect, with a beat for the beacons to leave the page.
+    trackBeginCheckout(lines.map((l) => ({ id: l.variantId, name: l.name, price: l.price, qty: l.qty })), subtotal);
     const url = await checkoutUrl(lines.map((l) => ({ variantId: l.variantId, qty: l.qty })));
-    if (url) { window.location.href = url; return; }
+    if (url) { setTimeout(() => { window.location.href = url; }, 150); return; }
     setBusy(false);
     setErr("We could not reach the checkout just now. Give it a moment and try again.");
   };
