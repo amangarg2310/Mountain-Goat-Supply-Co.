@@ -34,7 +34,10 @@ export default async function Home() {
           <h1>
             Downhill<br />counts too.
           </h1>
-          <p>Hiking merch for people who&rsquo;d rather say they hike.</p>
+          <p>
+            Hiking merch for people who&rsquo;d rather say they hike. And yes, our mascot is a
+            snack-obsessed goat.
+          </p>
           <Link href="/shop" className="btn-hero">Take me to the shirts</Link>
         </div>
       </section>
