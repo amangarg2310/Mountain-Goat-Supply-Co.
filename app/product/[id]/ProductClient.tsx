@@ -134,7 +134,7 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
           <div className="trust">
             <div><Star /><span>Comfort Colors garment-dyed cotton. Softens every wash</span></div>
             <div><Loop /><span>Relaxed fit. Worth a look at the size guide.</span></div>
-            <div><Box /><span>Free shipping. Arrives in 8 to 10 business days.</span></div>
+            <div><Box /><span>Free shipping on all orders, for a limited time.</span></div>
           </div>
 
           {p.details.length ? (

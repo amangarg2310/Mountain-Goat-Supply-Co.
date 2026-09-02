@@ -140,7 +140,9 @@ function normalise(raw: RawProduct): Product {
     kind: c.kind ?? guessKind(raw.name),
     tag: c.tag,
     blurb: c.blurb,
-    desc: raw.description?.trim() ? stripHtml(raw.description) : c.desc,
+    // Both paths go through stripHtml: Fourthwall sends HTML, and our own copy
+    // entries are authored with <p> tags too, so neither can leak raw markup.
+    desc: stripHtml(raw.description?.trim() ? raw.description : c.desc),
     price: prices.length ? Math.min(...prices) : 0,
     compareAt: variants.find((v) => v.compareAt)?.compareAt,
     images: (raw.images ?? []).map((i) => i.url),
