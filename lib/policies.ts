@@ -33,36 +33,36 @@ export const DOCS: Doc[] = [
     title: "Shipping",
     nav: "Shipping",
     blurb: "What it costs, how long it takes, where it goes.",
-    intro: "Nothing here is a surprise, which is the whole point of the page.",
+    intro: "No surprises. That is the whole point of the page.",
     updated: UPDATED,
     sections: [
       {
         h: "What it costs",
         ps: [
-          "Shipping is free on every order. No minimum, no threshold to hit, no upsell to reach it.",
-          "Duties and import taxes on international orders are calculated at checkout, once there is a destination to work them out against. The exact figure appears before you pay. Some countries add a customs handling fee on arrival that no seller can see in advance or control.",
+          "Shipping costs are shown at checkout before you pay. We run free shipping promotions from time to time, and when one is on it is announced on the site.",
+          "Duties and import taxes on international orders are also calculated at checkout, once there is a destination to work them out against. Some countries add a customs handling fee on arrival that no seller can see in advance.",
         ],
       },
       {
         h: "How long it takes",
         ps: [
-          "Most orders arrive within eight to ten business days.",
-          "International orders run longer and vary more than we can usefully promise. Busy periods and holidays stretch these numbers too.",
-          "If yours is running late we would rather tell you than let you refresh a tracking page.",
+          "Most orders arrive within about eight to ten business days. Shirts are printed after you order, so that window covers making it and moving it.",
+          "International orders take longer. Busy periods and holidays stretch every estimate on this page.",
+          "Once a parcel is with the carrier, the timing is theirs, not ours. If yours is running late, tell us and we will chase it.",
         ],
       },
       {
         h: "Tracking",
         ps: [
-          "A tracking number is emailed as soon as your order is on its way. If nothing has arrived and nothing has moved after ten business days, get in touch and we will chase it.",
-          "Carriers occasionally mark a parcel delivered a day or two before it actually turns up. If yours says delivered and it is not there, give it forty eight hours before assuming the worst.",
+          "A tracking number is emailed as soon as your order ships.",
+          "Carriers sometimes mark a parcel delivered a day or two early. If yours says delivered and it is not there, give it forty eight hours before assuming the worst.",
         ],
       },
       {
         h: "Wrong address and failed delivery",
         ps: [
-          "Please make sure your shipping address is correct before placing your order. We are not responsible for orders that are delayed, returned or undeliverable because the address given was incorrect or incomplete, or because a package was not collected.",
-          "If an order is returned to sender, additional shipping charges may apply before it can be sent again.",
+          "Check your address before you order. We are not responsible for parcels delayed, returned or lost because the address was wrong or incomplete, or because nobody collected it.",
+          "If an order comes back to us, reshipping it may cost extra.",
         ],
       },
     ],
@@ -78,23 +78,23 @@ export const DOCS: Doc[] = [
       {
         h: "No refunds",
         ps: [
-          "Because our garments are printed to order, we do not accept returns or issue refunds for change of mind, incorrect size selection, or personal preference. Please review the product description and size guide carefully before placing your order.",
-          "If your item arrives damaged, defective, or different from what you ordered, contact us through the form on the homepage with a photo and we will work with you to make it right.",
-          "Nothing in this policy limits any rights or remedies you may have under applicable consumer protection laws.",
+          "Every garment is printed after you order it, so we cannot accept returns or issue refunds for change of mind, wrong size chosen, or personal preference. Check the size guide first.",
+          "If your item arrives damaged, defective, or different from what you ordered, send us a photo through the form on the homepage and we will make it right.",
+          "Nothing here limits any rights you have under consumer protection law.",
         ],
       },
       {
         h: "Cancellations",
         ps: [
-          "Orders enter production shortly after they are placed and generally cannot be cancelled or changed once production has begun.",
-          "If you spot a mistake immediately after ordering, message us straight away and we will tell you honestly whether it is still possible to catch it.",
+          "Orders go into production quickly and usually cannot be changed or cancelled once they do.",
+          "If you spot a mistake right after ordering, message us straight away and we will tell you honestly whether we can still catch it.",
         ],
       },
       {
         h: "Print and colour variations",
         ps: [
-          "Our products are printed to order, so minor variations in print placement, colour, scale and appearance may occur from one item to another. Colours may also appear slightly different depending on your screen settings and the garment material.",
-          "These normal production variations are not considered defects.",
+          "Print placement, colour and scale vary slightly from one printed item to the next. Colours also look different depending on your screen and the garment.",
+          "That variation is how the process works, not a defect.",
         ],
       },
     ],
@@ -117,39 +117,39 @@ export const DOCS: Doc[] = [
       {
         h: "What we collect",
         ps: [
-          "When you place an order we receive your name, delivery address, email and order contents. Payment card details are entered on Fourthwall's checkout and are never transmitted to or stored by this website.",
-          "When you use the contact form we receive the message you write, plus your email address if you choose to give one so we can reply.",
-          "When you simply browse, our hosting provider logs standard request data such as IP address, browser type and pages requested, for security and reliability.",
+          "Place an order and we receive your name, delivery address, email and order contents. Card details are entered on Fourthwall's checkout and never reach this website.",
+          "Use the contact form and we receive your message, plus your email address if you give one so we can reply.",
+          "Just browsing, our host logs standard request data such as IP address, browser type and pages requested, for security and reliability.",
         ],
       },
       {
         h: "Who processes it",
         ps: [
-          "Fourthwall handles our catalogue, checkout, payment and fulfilment, and is the processor for order and payment data. Their own privacy policy governs that handling.",
+          "Fourthwall runs our catalogue, checkout, payment and fulfilment, so order and payment data is handled under their privacy policy.",
           "Vercel hosts this site and processes server request logs.",
-          "FormSubmit relays contact form submissions to our inbox, which means the contents of a message you send pass through their service on the way to us.",
-          "Meta (Facebook) Pixel runs on this site. It records page views and shopping actions and links them to a Meta account where one exists, so we can measure whether our ads work and show ads to people who have visited. It sets its own cookies and sends data to Meta, who act as an independent controller under their own policy.",
+          "FormSubmit relays contact form messages to our inbox, so what you write passes through their service on the way to us.",
+          "Meta Pixel records page views and shopping actions and links them to a Meta account where one exists, which is how we measure whether our ads work. It sets its own cookies and sends that data to Meta, who handle it under their own policy.",
           "We do not sell, rent or trade personal information to anybody.",
         ],
       },
       {
         h: "How long we keep it",
         ps: [
-          "Order records are retained as long as needed for fulfilment, returns, accounting and tax obligations. Contact form messages are kept until the matter is resolved and then periodically cleared.",
+          "Order records stay as long as fulfilment, returns, accounting and tax require. Contact form messages are cleared once the matter is settled.",
         ],
       },
       {
         h: "Your rights",
         ps: [
           "You can ask what we hold about you, ask us to correct it, or ask us to delete it. Depending on where you live you may also have rights to restrict or object to processing, to receive your data in a portable form, and to be free from discrimination for exercising any of this.",
-          "Ask through the contact form. We will respond within thirty days. We may need to confirm your identity first, which usually means replying from the address that placed the order.",
+          "Ask through the contact form and we will respond within thirty days. We may need to confirm it is you first, which usually means replying from the address that placed the order.",
         ],
       },
       {
         h: "Cookies",
         ps: [
-          "Two kinds. Functional cookies keep your cart working between pages. Advertising cookies are set by the Meta Pixel described above and are used for ad measurement and retargeting.",
-          "You can block or clear cookies in your browser settings, and you can limit ad targeting in your Meta account under Ad Preferences. Fourthwall's checkout sets its own cookies once you leave our pages for theirs.",
+          "Two kinds. Functional cookies keep your cart working between pages. Advertising cookies come from the Meta Pixel above and are used for ad measurement and retargeting.",
+          "Block or clear them in your browser settings, and limit ad targeting in your Meta account under Ad Preferences. Fourthwall's checkout sets its own cookies once you leave our pages for theirs.",
         ],
       },
       {
@@ -161,7 +161,7 @@ export const DOCS: Doc[] = [
       {
         h: "Changes",
         ps: [
-          `This policy may change. The date at the top of the page is the last revision. Material changes will be noted here rather than made quietly. Last updated ${UPDATED}.`,
+          `This policy may change. The date at the top is the last revision, and material changes get noted here rather than made quietly. Last updated ${UPDATED}.`,
         ],
       },
     ],
@@ -177,54 +177,54 @@ export const DOCS: Doc[] = [
       {
         h: "Agreement",
         ps: [
-          `By using mountaingoathiking.com or placing an order you agree to these terms. The site is operated by ${ENTITY} ("we", "us"), incorporated in ${JURISDICTION}. If you do not agree to them, please do not use the site.`,
+          `Using mountaingoathiking.com or placing an order means you agree to these terms. The site is operated by ${ENTITY} ("we", "us"), incorporated in ${JURISDICTION}. If you do not agree, please do not use the site.`,
         ],
       },
       {
         h: "Orders",
         ps: [
-          "An order is an offer to buy. It is accepted when we confirm it by email, and until then we may decline it, for instance if an item cannot be produced or a pricing error has occurred.",
-          "Prices are in US dollars and may change without notice. If an item is listed at an obviously incorrect price we will contact you before charging anything and you may cancel.",
-          "Checkout, payment processing and fulfilment are carried out by Fourthwall and are also subject to their terms.",
+          "An order is an offer to buy, accepted when we confirm it by email. Until then we may decline it, for example if an item cannot be produced or a price was wrong.",
+          "Prices are in US dollars and may change without notice. If something is listed at an obviously wrong price we will contact you before charging anything, and you can cancel.",
+          "Checkout, payment and fulfilment run through Fourthwall, so their terms apply too.",
         ],
       },
       {
         h: "Products",
         ps: [
-          "Garments are printed to order. Colours shown on screen are as accurate as we can manage, but screens vary and garment-dyed fabric varies between batches by design. Minor variation in shade and print placement is a property of the process, not a defect.",
+          "Garments are printed after you order. On-screen colours are as accurate as we can manage, but screens differ and garment-dyed fabric shifts between batches by design. Small differences in shade and print placement are part of the process, not defects.",
           "Measurements on product pages are approximate and taken flat.",
         ],
       },
       {
         h: "Our designs",
         ps: [
-          "All artwork, graphics, product photography, text and the Mountain G.O.A.T Supply Co. name and marks on this site belong to us or are used with permission. You are welcome to wear the shirts anywhere. You are not licensed to reproduce, print or resell the designs.",
-          "Any product parody or humour is our own original work and implies no affiliation with, or endorsement by, any other brand.",
+          "The artwork, photography, text and the Mountain G.O.A.T Supply Co. name and marks belong to us or are used with permission. Wear the shirts anywhere you like. You may not reproduce, print or resell the designs.",
+          "Any parody or humour in a product is our own original work and implies no affiliation with any other brand.",
         ],
       },
       {
         h: "Acceptable use",
         ps: [
-          "Do not attempt to disrupt the site, gain unauthorised access to it, scrape it at volume, or use it to send anything unlawful through the contact form.",
+          "Do not disrupt the site, break into it, scrape it at volume, or push anything unlawful through the contact form.",
         ],
       },
       {
         h: "Disclaimers and liability",
         ps: [
-          "The site is provided as is. We do not warrant that it will be uninterrupted or error free.",
-          "To the fullest extent the law allows, our total liability arising from an order is limited to the amount you paid for it. Nothing here limits liability that cannot lawfully be limited, and none of it affects your statutory consumer rights.",
+          "The site is provided as is. We do not promise it will be uninterrupted or error free.",
+          "As far as the law allows, our total liability on an order is limited to what you paid for it. Nothing here limits liability that cannot lawfully be limited, or affects your statutory consumer rights.",
         ],
       },
       {
         h: "Governing law",
         ps: [
-          `These terms are governed by the laws of ${JURISDICTION}, and any dispute will be handled by the courts there.`,
+          `These terms are governed by the laws of ${JURISDICTION}, and disputes go to the courts there.`,
         ],
       },
       {
         h: "Changes and contact",
         ps: [
-          `We may update these terms; the revision date is at the top of the page. Questions go through the contact form. Last updated ${UPDATED}.`,
+          `We may update these terms, with the revision date shown at the top. Questions go through the contact form. Last updated ${UPDATED}.`,
         ],
       },
     ],

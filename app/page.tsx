@@ -60,9 +60,8 @@ export default async function Home() {
           <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
             <h2>The back of the pack</h2>
             <p className="txt">
-              Other outdoor brands are very interested in how fast you did it. We would rather sell you something to
-              sit on a log in, eating a granola bar you found in a jacket pocket from last October. It was still
-              fine, by the way.
+              Other outdoor brands want to know how fast you did it. We would rather sell you something to sit on a
+              log in, eating a granola bar you found in a jacket pocket from last October. It was still fine.
             </p>
             <blockquote>&ldquo;Worst Case Scenario: A Bear Kills You.&rdquo;</blockquote>
           </div>
@@ -92,7 +91,7 @@ export default async function Home() {
           <>
             <h2 className="h-mid" style={{ marginBottom: 8 }}>No reviews yet</h2>
             <p className="sub-muted" style={{ marginBottom: 24, maxWidth: "54ch" }}>
-              Nobody has bought anything yet. When someone does and has something to say about it, their words go here
+              Nobody has bought anything yet. When someone does and has something to say, their words go here
               instead of ours.
             </p>
           </>

@@ -38,8 +38,9 @@ export const FAQS = [
   { q: "Is this technical apparel?", a: "No. It's cotton. It gets wet and stays wet." },
   { q: "How does it fit?", a: "Relaxed through the body. Size down if you want it closer to the frame. Size up if you're being honest with yourself." },
   { q: "Will this make me faster?", a: "No." },
-  { q: "Do you ship internationally?", a: "Yes, most places. International takes longer than the usual eight to ten business days." },
-  { q: "Returns?", a: "If it turns up damaged, defective or not what you ordered, we fix it. We cannot take one back over sizing or a change of heart, so give the size guide a look first." },
+  { q: "How long does shipping take?", a: "Usually about eight to ten business days. Shirts are printed after you order, and once it is with the carrier the timing is theirs." },
+  { q: "Do you ship internationally?", a: "Yes, most places. It takes longer." },
+  { q: "Returns?", a: "Damaged, defective or not what you ordered, we fix it. We cannot take one back over sizing or a change of heart, so check the size guide first." },
 ];
 
 export const LOGO_URL =

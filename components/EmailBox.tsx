@@ -32,8 +32,8 @@ export default function EmailBox() {
       <div style={{ maxWidth: "46ch" }}>
         <h2>Tell us things</h2>
         <p>
-          Questions, shirt ideas, trail reports, or a problem with an order. It all lands in the
-          same inbox and a real person reads it.
+          Questions, shirt ideas, trail reports, a problem with an order. It lands in one inbox
+          and a real person reads it.
         </p>
       </div>
       {status === "sent" ? (
@@ -71,7 +71,7 @@ export default function EmailBox() {
           {status === "error" ? (
             <p style={{ margin: 0, fontSize: 14, color: "#a63c22", maxWidth: "44ch" }}>
               That didn&rsquo;t send, and it is our end, not yours. Try again shortly, or reach us
-              through <a href="https://mountain-goat-supply-co-shop.fourthwall.com/contact" target="_blank" rel="noopener noreferrer">our Fourthwall shop</a> in the meantime.
+              through <a href="https://mountain-goat-supply-co-shop.fourthwall.com/contact" target="_blank" rel="noopener noreferrer">our Fourthwall shop</a>.
             </p>
           ) : null}
         </form>

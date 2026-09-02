@@ -131,9 +131,17 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
             {added ? "In the pack ✓" : variant ? <>Add to cart&nbsp;&nbsp;·&nbsp;&nbsp;${price}</> : "Pick a combination"}
           </button>
 
+          {/* The first two lines are about garments. A cap or a steel flask has
+              no garment dye and no relaxed fit, so they get their own line. */}
           <div className="trust">
-            <div><Star /><span>Comfort Colors garment-dyed cotton. Softens every wash</span></div>
-            <div><Loop /><span>Relaxed fit. Worth a look at the size guide.</span></div>
+            {p.kind === "TEE" || p.kind === "HOODIE" ? (
+              <>
+                <div><Star /><span>Comfort Colors garment-dyed cotton. Softens every wash.</span></div>
+                <div><Loop /><span>Relaxed fit. Check the size guide.</span></div>
+              </>
+            ) : (
+              <div><Star /><span>Built to outlast the trip you bought it for.</span></div>
+            )}
             <div><Box /><span>Free shipping on all orders, for a limited time.</span></div>
           </div>
 
