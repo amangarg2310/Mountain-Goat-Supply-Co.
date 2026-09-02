@@ -11,11 +11,11 @@ const SITE_URL =
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Mountain G.O.A.T Supply Co. — Gear for slow hikers",
-  description: "Tees, hats and gear for people who hike slowly, stop often and turn around without apologising.",
+  title: "Mountain G.O.A.T Supply Co. — Hiking merch for slow hikers",
+  description: "Hiking merch for people who'd rather say they hike. Tees, hats and a flask, all printed to order.",
   openGraph: {
     title: "Mountain G.O.A.T Supply Co.",
-    description: "Tees and hats for people who hike slowly and stop often.",
+    description: "Hiking merch for people who'd rather say they hike.",
     images: ["/assets/hero.jpg"],
   },
 };

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="col">
           <img src={LOGO_URL} alt="Mountain G.O.A.T Supply Co." />
           <p style={{ margin: 0, maxWidth: "34ch", fontSize: "14.5px", lineHeight: 1.6 }}>
-            Hiking gear for people who do not really hike.
+            Hiking merch for people who&rsquo;d rather say they hike.
           </p>
         </div>
         <div className="col">

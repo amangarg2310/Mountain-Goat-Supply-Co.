@@ -32,9 +32,9 @@ export default async function Home() {
         </picture>
         <div className="hero-copy">
           <h1>
-            Hike now,<br />regret less<br />(maybe).
+            Downhill<br />counts too.
           </h1>
-          <p>Gear for people who hike slowly. Our spokesperson is a goat.</p>
+          <p>Hiking merch for people who&rsquo;d rather say they hike.</p>
           <Link href="/shop" className="btn-hero">Take me to the shirts</Link>
         </div>
       </section>
