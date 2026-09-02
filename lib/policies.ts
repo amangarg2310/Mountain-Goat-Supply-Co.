@@ -18,7 +18,10 @@ export type Doc = {
   title: string;
   nav: string;
   blurb: string;
-  intro: string;
+  /* Optional on purpose. An intro earns its place only when it tells the
+     reader something the sections do not, like the one on returns. A line
+     that just announces the page exists is cut. */
+  intro?: string;
   updated: string;
   sections: { h: string; ps: string[] }[];
 };
@@ -33,7 +36,6 @@ export const DOCS: Doc[] = [
     title: "Shipping",
     nav: "Shipping",
     blurb: "What it costs, how long it takes, where it goes.",
-    intro: "No surprises. That is the whole point of the page.",
     updated: UPDATED,
     sections: [
       {
@@ -161,7 +163,7 @@ export const DOCS: Doc[] = [
       {
         h: "Changes",
         ps: [
-          `This policy may change. The date at the top is the last revision, and material changes get noted here rather than made quietly. Last updated ${UPDATED}.`,
+          "This policy may change. The date at the top is the last revision, and material changes get noted here rather than made quietly.",
         ],
       },
     ],
@@ -171,7 +173,6 @@ export const DOCS: Doc[] = [
     title: "Terms of service",
     nav: "Terms",
     blurb: "The rules of using the site and buying from it.",
-    intro: "Nobody reads these. They still have to exist, and ours are at least short.",
     updated: UPDATED,
     sections: [
       {
@@ -224,7 +225,7 @@ export const DOCS: Doc[] = [
       {
         h: "Changes and contact",
         ps: [
-          `We may update these terms, with the revision date shown at the top. Questions go through the contact form. Last updated ${UPDATED}.`,
+          "We may update these terms, with the revision date shown at the top. Questions go through the contact form.",
         ],
       },
     ],

@@ -35,7 +35,9 @@ export default async function PolicyDoc({ params }: { params: Promise<{ doc: str
       <h1 style={{ margin: "16px 0 10px", font: "400 clamp(34px,4.6vw,56px)/1 var(--disp)" }}>
         {d.title}
       </h1>
-      <p style={{ margin: "0 0 6px", fontSize: 17, color: "rgba(51,64,42,.68)" }}>{d.intro}</p>
+      {d.intro ? (
+        <p style={{ margin: "0 0 6px", fontSize: 17, color: "rgba(51,64,42,.68)" }}>{d.intro}</p>
+      ) : null}
       <p style={{ margin: "0 0 38px", fontSize: 14, color: "rgba(51,64,42,.5)" }}>
         Last updated {d.updated}
       </p>
