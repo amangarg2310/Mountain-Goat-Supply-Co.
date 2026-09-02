@@ -46,11 +46,14 @@ export const COPY: Record<string, Copy> = {
     desc:
       "Nearly sixty years unbeaten and the only surviving footage is out of focus, which is either evidence of nothing or the greatest defensive performance in the history of the sport. Bigfoot, full pack, mid-stride, going wherever he likes. Printed on garment-dyed cotton.",
   },
+  /* Artwork check, August 2026: the design reads TRULY ONE WITH NATURE over a
+     walking bear with a skeleton hiker curled up inside it. The old copy here
+     described a caption the shirt no longer carries. */
   "an-honest-mistake-was-made": {
     tag: "New",
-    blurb: "Somebody got eaten, and the caption is treating it like a filing error.",
+    blurb: "A skeleton hiker riding inside a bear, filed under becoming one with nature.",
     desc:
-      "The hiker is inside the bear. The bear looks untroubled. The caption declines to assign blame to anybody. If you enjoy the specific comedy of a catastrophic outcome described in the language of a minor clerical error, this is the shirt.",
+      "The hiker is inside the bear, boots up, pack still on, entirely at peace. The bear is walking on like nothing happened. The caption calls this being truly one with nature, which is technically correct and not remotely reassuring.",
   },
   "this-is-technically-outdoors": {
     tag: "New",
@@ -94,7 +97,7 @@ export const COPY: Record<string, Copy> = {
   "worst-case-scenario": {
     blurb: "The worst that happens is a bear kills you, so everything under that is fine.",
     desc:
-      "Trail anxiety gets easier once you name the ceiling. Either a bear gets you or it doesn't. Everything under that line is mosquitoes and a wet sock. Two colour print on garment-dyed cotton.",
+      "Trail anxiety gets easier once you name the ceiling. Either a bear gets you or it doesn't. Everything under that line is mosquitoes and a wet sock. The bear on the shirt is giving a thumbs up next to a sign reading nature doesn't care about your feelings.",
   },
   "bear-encounter-checklist": {
     blurb: "A four step checklist that gives up and turns into regret somewhere around step three.",
@@ -123,34 +126,41 @@ export const COPY: Record<string, Copy> = {
       "Somewhere past the fourth false summit the colours go sideways. We had an artist draw what that looks like. Nobody who has finished a long descent has argued with it.",
   },
   /* The Over Elevated Club line. The artwork is one arched wordmark, so the
-     joke lives in the copy playing the club completely straight. */
+     joke lives in the copy playing the club completely straight.
+
+     Specs below are checked against the Fourthwall blanks, August 2026:
+       tee    Comfort Colors garment-dyed heavyweight, DTG print, 8 colours
+       cap    Yupoong 6245CM dad hat, chino twill, EMBROIDERED, buckle, 10 colours
+       bucket Big Accessories BX003, cotton twill, PRINTED (not stitched), 2 colours
+       flask  Allcolor 1020, 17oz double-walled steel, screw cap, 6h, hand wash
+     Do not describe the bucket hat as embroidered. It is a print. */
   "over-elevated-tee": {
     tag: "New",
     kind: "TEE",
     blurb: "Membership shirt for people who climbed higher than the plan said and have opinions about it now.",
     desc:
-      "<p>Small chest mark, big claim. The Over Elevated Club is for anybody who went further up than intended and then pretended that was the plan all along.</p><p>No initiation, no fees. If your ears have ever popped on a walk, you are in. Soft cotton in eight colours.</p>",
+      "<p>Small chest mark, big claim. The Over Elevated Club is for anybody who went further up than intended and then pretended that was the plan all along.</p><p>No initiation, no fees. If your ears have ever popped on a walk, you are in. Garment-dyed heavyweight cotton in eight colours.</p>",
   },
   "over-elevated-cap": {
     tag: "New",
     kind: "CAP",
     blurb: "An embroidered hat that admits you went too far up and would do it again.",
     desc:
-      "<p>The club wordmark, stitched, on a classic low profile cap. Brim low on the way up, lower on the way down.</p><p>Embroidery outlasts most summit plans. Ten colours, adjustable strap, fits every head that has ever been above sea level.</p>",
+      "<p>The club wordmark stitched onto an unstructured low profile dad hat. Brim low on the way up, lower on the way down.</p><p>Cotton twill, buckle strap at the back, one size that fits most heads. Ten colours.</p>",
   },
   "over-elevated-bucket-hat": {
     tag: "New",
     kind: "HAT",
-    blurb: "Full sun coverage for people who peaked, in the geographic sense.",
+    blurb: "Sun off your face, and a public admission that you peaked in the geographic sense.",
     desc:
-      "<p>A bucket hat does two things. It keeps the sun off your face and it announces that you have stopped caring what the sun thinks of your outfit.</p><p>Club wordmark embroidered up front. Two colours, one shape, zero aerodynamics.</p>",
+      "<p>A bucket hat does two things. It keeps the sun off your face and it announces that you have stopped caring what the sun thinks of your outfit.</p><p>Cotton twill with the club wordmark printed up front, a two and a quarter inch brim, and sewn eyelets so your head can breathe. Two colours, one size, zero aerodynamics.</p>",
   },
   "over-elevated-club-hydration-flask": {
     tag: "New",
     kind: "FLASK",
     blurb: "Cold water at altitude, which is the entire membership benefit.",
     desc:
-      "<p>Stainless steel, screw top, club wordmark on the side. Keeps water cold long after your enthusiasm has gone warm.</p><p>Fits most bottle pockets and every cup holder on the drive to the trailhead, which is where a lot of our hydration happens.</p>",
+      "<p>Seventeen ounces of double-walled stainless steel with a screw-on leak-proof cap. Holds a temperature for about six hours, hot or cold.</p><p>Slim enough for a cup holder on the drive to the trailhead, which is where a good deal of our hydration happens. Hand wash only.</p>",
   },
   "the-minimalist": {
     tag: "Staff pick",

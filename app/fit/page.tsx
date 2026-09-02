@@ -8,7 +8,8 @@ export default function Fit() {
     <main style={{ padding: "56px var(--pad) 90px", maxWidth: 860, margin: "0 auto" }}>
       <h1 style={{ margin: "0 0 10px", font: "400 clamp(38px,5vw,62px)/1 var(--disp)" }}>Fit &amp; FAQ</h1>
       <p style={{ margin: "0 0 34px", fontSize: 17, color: "rgba(51,64,42,.68)" }}>
-        Inches, laid flat. Relaxed fit, so size down for something closer to the frame.
+        Tee measurements in inches, laid flat. Relaxed fit, so size down for something closer to the
+        frame. Hats are one size that fits most.
       </p>
       <div className="tablewrap">
         <table>

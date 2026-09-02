@@ -35,7 +35,8 @@ export const SIZETABLE = [
 ];
 
 export const FAQS = [
-  { q: "Is this technical apparel?", a: "No. It's cotton. It gets wet and stays wet." },
+  { q: "Is this technical apparel?", a: "No. The tees and hats are cotton. They get wet and stay wet." },
+  { q: "What are the shirts made of?", a: "Comfort Colors garment-dyed heavyweight cotton, printed after you order. The dye is what gives each colour its slightly washed look." },
   { q: "How does it fit?", a: "Relaxed through the body. Size down if you want it closer to the frame. Size up if you're being honest with yourself." },
   { q: "Will this make me faster?", a: "No." },
   { q: "How long does shipping take?", a: "Usually about eight to ten business days. Shirts are printed after you order, and once it is with the carrier the timing is theirs." },

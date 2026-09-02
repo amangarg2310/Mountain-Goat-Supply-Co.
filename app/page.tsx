@@ -34,7 +34,7 @@ export default async function Home() {
           <h1>
             Hike now,<br />regret less<br />(maybe).
           </h1>
-          <p>Cotton tees for people who hike slowly. Our spokesperson is a goat.</p>
+          <p>Gear for people who hike slowly. Our spokesperson is a goat.</p>
           <Link href="/shop" className="btn-hero">Take me to the shirts</Link>
         </div>
       </section>
