@@ -18,7 +18,7 @@ export default function ShopClient({ products }: { products: Product[] }) {
     <main style={{ padding: "46px var(--pad) 80px" }}>
       <h1 className="h-display" style={{ marginBottom: 8 }}>Everything we bleat about</h1>
       <p style={{ margin: "0 0 26px", fontSize: 17, color: "rgba(51,64,42,.68)" }}>
-        All tees. Several jokes. No performance fabrics.
+        Tees, hats and one flask. Several jokes. No performance fabrics.
       </p>
 
       {products.length === 0 ? (

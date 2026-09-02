@@ -59,7 +59,7 @@ export type Product = {
   id: string;
   slug: string;
   name: string;
-  kind: "TEE" | "HOODIE";
+  kind: string;
   tag?: string;
   blurb: string;
   desc: string;

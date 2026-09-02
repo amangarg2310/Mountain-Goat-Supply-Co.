@@ -19,7 +19,7 @@ export type Copy = {
   tag?: string;
   blurb: string;
   desc: string;
-  kind?: "TEE" | "HOODIE";
+  kind?: string;
 };
 
 export const COPY: Record<string, Copy> = {
@@ -121,6 +121,36 @@ export const COPY: Record<string, Copy> = {
     blurb: "Hour six, no water left, and the mountain has started doing things.",
     desc:
       "Somewhere past the fourth false summit the colours go sideways. We had an artist draw what that looks like. Nobody who has finished a long descent has argued with it.",
+  },
+  /* The Over Elevated Club line. The artwork is one arched wordmark, so the
+     joke lives in the copy playing the club completely straight. */
+  "over-elevated-tee": {
+    tag: "New",
+    kind: "TEE",
+    blurb: "Membership shirt for people who climbed higher than the plan said and have opinions about it now.",
+    desc:
+      "<p>Small chest mark, big claim. The Over Elevated Club is for anybody who went further up than intended and then pretended that was the plan all along.</p><p>No initiation, no fees. If your ears have ever popped on a walk, you are in. Soft cotton in eight colours.</p>",
+  },
+  "over-elevated-cap": {
+    tag: "New",
+    kind: "CAP",
+    blurb: "An embroidered hat that admits you went too far up and would do it again.",
+    desc:
+      "<p>The club wordmark, stitched, on a classic low profile cap. Brim low on the way up, lower on the way down.</p><p>Embroidery outlasts most summit plans. Ten colours, adjustable strap, fits every head that has ever been above sea level.</p>",
+  },
+  "over-elevated-bucket-hat": {
+    tag: "New",
+    kind: "HAT",
+    blurb: "Full sun coverage for people who peaked, in the geographic sense.",
+    desc:
+      "<p>A bucket hat does two things. It keeps the sun off your face and it announces that you have stopped caring what the sun thinks of your outfit.</p><p>Club wordmark embroidered up front. Two colours, one shape, zero aerodynamics.</p>",
+  },
+  "over-elevated-club-hydration-flask": {
+    tag: "New",
+    kind: "FLASK",
+    blurb: "Cold water at altitude, which is the entire membership benefit.",
+    desc:
+      "<p>Stainless steel, screw top, club wordmark on the side. Keeps water cold long after your enthusiasm has gone warm.</p><p>Fits most bottle pockets and every cup holder on the drive to the trailhead, which is where a lot of our hydration happens.</p>",
   },
   "the-minimalist": {
     tag: "Staff pick",
