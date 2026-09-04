@@ -7,7 +7,7 @@
    Products, photography, colours, sizes and prices all come
    from Fourthwall. lib/copy.ts layers the brand voice on top.
    ============================================================ */
-import { copyFor, XSELL } from "./copy";
+import { copyFor, FALLBACK, XSELL } from "./copy";
 
 const TOKEN = process.env.NEXT_PUBLIC_FW_STOREFRONT_TOKEN;
 const CHECKOUT_DOMAIN =
@@ -60,6 +60,7 @@ export type Product = {
   slug: string;
   name: string;
   kind: string;
+  blank?: "bella-canvas";
   tag?: string;
   blurb: string;
   desc: string;
@@ -138,11 +139,12 @@ function normalise(raw: RawProduct): Product {
     slug: raw.slug,
     name: c.name ?? raw.name,
     kind: c.kind ?? guessKind(raw.name),
+    blank: c.blank,
     tag: c.tag,
     blurb: c.blurb,
     // Both paths go through stripHtml: Fourthwall sends HTML, and our own copy
     // entries are authored with <p> tags too, so neither can leak raw markup.
-    desc: stripHtml(raw.description?.trim() ? raw.description : c.desc),
+    desc: stripHtml(raw.description?.trim() ? raw.description : (c.desc ?? FALLBACK.desc ?? "")),
     price: prices.length ? Math.min(...prices) : 0,
     compareAt: variants.find((v) => v.compareAt)?.compareAt,
     images: (raw.images ?? []).map((i) => i.url),

@@ -18,8 +18,13 @@ export type Copy = {
   name?: string;
   tag?: string;
   blurb: string;
-  desc: string;
+  /* Optional. Fourthwall is the source of truth for descriptions, so an entry
+     only needs a desc when the product has none there yet. */
+  desc?: string;
   kind?: string;
+  /* Set when a product is not on the Comfort Colors blank, so the product page
+     stops claiming garment-dyed cotton for it. */
+  blank?: "bella-canvas";
 };
 
 export const COPY: Record<string, Copy> = {
@@ -161,6 +166,30 @@ export const COPY: Record<string, Copy> = {
     blurb: "Cold water at altitude, which is the entire membership benefit.",
     desc:
       "<p>Seventeen ounces of double-walled stainless steel with a screw-on leak-proof cap. Holds a temperature for about six hours, hot or cold.</p><p>Slim enough for a cup holder on the drive to the trailhead, which is where a good deal of our hydration happens. Hand wash only.</p>",
+  },
+  /* Second drop, September 2026. Descriptions live in Fourthwall for these, so
+     only the card blurb is written here. Blanks verified in the admin: all
+     Comfort Colors except SORRY. CAN'T., which is Bella+Canvas Supersoft. */
+  "i-love-peeing-outside": {
+    tag: "New",
+    blurb: "One of the actual reasons people go outdoors, finally said out loud.",
+  },
+  "weve-all-been-roasted": {
+    tag: "New",
+    blurb: "A support group for marshmallows, which is more emotional honesty than most camping shirts manage.",
+  },
+  "no-bad-trails-just-bad-knees": {
+    tag: "New",
+    blurb: "The trail was never the problem. Your knees filed a separate report.",
+  },
+  "sorry-cant-hiking-bye": {
+    tag: "New",
+    blank: "bella-canvas",
+    blurb: "A full excuse and the end of the conversation, in four words.",
+  },
+  "a-brief-encounter-with-forever": {
+    tag: "New",
+    blurb: "No joke on this one. A moon, some clouds, and a view that shut everybody up.",
   },
   "the-minimalist": {
     tag: "Staff pick",

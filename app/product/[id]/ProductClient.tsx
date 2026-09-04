@@ -136,7 +136,11 @@ export default function ProductClient({ p, related }: { p: Product; related: Pro
           <div className="trust">
             {p.kind === "TEE" || p.kind === "HOODIE" ? (
               <>
-                <div><Star /><span>Comfort Colors garment-dyed cotton. Softens every wash.</span></div>
+                <div><Star /><span>
+                  {p.blank === "bella-canvas"
+                    ? "Bella+Canvas supersoft cotton. Lighter and closer fitting."
+                    : "Comfort Colors garment-dyed cotton. Softens every wash."}
+                </span></div>
                 <div><Loop /><span>Relaxed fit. Check the size guide.</span></div>
               </>
             ) : (
