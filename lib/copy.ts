@@ -191,6 +191,104 @@ export const COPY: Record<string, Copy> = {
     tag: "New",
     blurb: "No joke on this one. A moon, some clouds, and a view that shut everybody up.",
   },
+  /* Third drop, November 2026. Card blurbs only; descriptions live in
+     Fourthwall. Each line written against the printed artwork. No "New" tags:
+     with 31 arriving at once the tag would sit on half the shop and mean
+     nothing. */
+  "peaking-early": {
+    blurb: "Best part of the hike was the first ten minutes, and we have made peace with that.",
+  },
+  "nature-but-easy": {
+    blurb: "A hammock between two trees, which is all the outdoors most of us were after.",
+  },
+  "just-here-for-the-view": {
+    blurb: "Not for the cardio, the distance or the personal growth. The view.",
+  },
+  "out-of-breath-still-happy": {
+    blurb: "Wheezing and grinning at the same time, and refusing to say which one is winning.",
+  },
+  "conversational-pace": {
+    blurb: "If you can still talk, you are doing it right. We will be talking the entire time.",
+  },
+  "touch-grass-take-naps": {
+    blurb: "Two pieces of wellness advice. We only ever follow the second one.",
+  },
+  "trail-mix-athlete": {
+    blurb: "Elite performance, measured entirely in handfuls.",
+  },
+  "snack-break-specialist": {
+    blurb: "The break was the plan. The hike was the excuse.",
+  },
+  "goat-mode-off": {
+    blurb: "The goat is off duty and would rather not discuss elevation.",
+  },
+  "downhill-counts": {
+    blurb: "The official position of this company, now available as a shirt.",
+  },
+  "conversational-pace-only": {
+    blurb: "House rules. Anybody setting a pace that stops the talking can go on ahead.",
+  },
+  "snacks-first-summit-later": {
+    blurb: "In that order. The second part is optional.",
+  },
+  "the-nap-is-part-of-the-training": {
+    blurb: "It is in the training plan. We wrote the training plan.",
+  },
+  "turning-around-still-counts": {
+    blurb: "Every hike has a turnaround point. Ours just shows up early.",
+  },
+  /* The Mountain Goat Hiking line: small chest prints, no joke on purpose. */
+  "mountain-goat-hiking-sunset-trail": {
+    blurb: "A trail winding toward a low sun, in a small badge on the chest.",
+  },
+  "mountain-goat-hiking-goat-head": {
+    blurb: "One goat, drawn in a single fine line. Quiet enough to wear anywhere.",
+  },
+  "mountain-goat-hiking-peak-badge": {
+    blurb: "A goat standing on a summit it reached well before you did.",
+  },
+  "mountain-goat-hiking-classic-logo": {
+    blurb: "The wordmark in rust over a small range of peaks. The closest thing we have to a uniform.",
+  },
+  "mountain-goat-hiking-pine-wordmark": {
+    blurb: "Just the name and one small pine tree. Nothing to explain to anybody.",
+  },
+  "mountain-goat-hiking-summit-goat": {
+    blurb: "A goat on a rock, in fine line work. It is not going anywhere, and neither are you.",
+  },
+  "mountain-goat-hiking-ridgeline": {
+    blurb: "One thin ridgeline with a very small goat on top of it.",
+  },
+  "mountain-goat-hiking-golden-peaks": {
+    blurb: "A gold sun behind dark peaks, small enough to wear to dinner.",
+  },
+  "mountain-goat-hiking-rust-sunset": {
+    blurb: "A rust sun over the peaks and a row of pines. The understated one.",
+  },
+  "mountain-goat-hiking-golden-trail": {
+    blurb: "A trail running into the pines under a small gold sun, framed in an arch.",
+  },
+  "over-elevated-club": {
+    blurb: "The full club crest. The goat is drinking from a flask, which explains a lot about the club.",
+  },
+  "just-a-girl-who-hikes": {
+    blurb: "Says exactly what it says, in small handwriting, with a heart.",
+  },
+  "cardio-with-consequences-hiking-tee": {
+    blurb: "Paid parking, free suffering. The whole trailhead experience in two lines.",
+  },
+  "search-party-starter-hiking-tee": {
+    blurb: "Comes with instructions for the rescue team. Check the easy trails first.",
+  },
+  "dehydration-vision-quest-tee": {
+    blurb: "The rocks are speaking, and after six hours without water you are listening.",
+  },
+  "last-known-location-hiking-tee": {
+    blurb: "Last seen somewhere past the words ‘this shortcut should save time.’",
+  },
+  "scenic-route-to-oblivion-hiking-tee": {
+    blurb: "Great views, bad decisions, and a hiker standing far too close to the edge for both.",
+  },
   "the-minimalist": {
     tag: "Staff pick",
     blurb: "The only shirt we make with nothing written on it.",

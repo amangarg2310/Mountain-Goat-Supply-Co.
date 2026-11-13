@@ -92,6 +92,31 @@ function stripHtml(html: string): string {
     .trim();
 }
 
+/* Older products were named in ALL CAPS in Fourthwall, newer ones in Title
+   Case, so the grid looked inconsistent. All-caps names are converted for
+   display; anything already in mixed case is left exactly as written.
+   Dotted acronyms like G.O.A.T. stay upper case. */
+const SMALL = new Set(["a", "an", "the", "and", "but", "or", "for", "of", "to", "at", "in", "on", "by"]);
+function displayName(name: string): string {
+  if (/[a-z]/.test(name)) return name;
+  let afterStop = true;
+  return name
+    .split(/(\s+)/)
+    .map((w) => {
+      if (/^\s+$/.test(w)) return w;
+      let out: string;
+      if (/^([A-Z]\.){2,}$/.test(w.replace(/[^A-Z.]/g, ""))) out = w;
+      else {
+        const lower = w.toLowerCase();
+        const core = lower.replace(/[^a-z']/g, "");
+        out = !afterStop && SMALL.has(core) ? lower : lower.replace(/[a-z]/, (c) => c.toUpperCase());
+      }
+      afterStop = /[.:!?]$/.test(w);
+      return out;
+    })
+    .join("");
+}
+
 function guessKind(name: string): "TEE" | "HOODIE" {
   return /hood|crew|sweat/i.test(name) ? "HOODIE" : "TEE";
 }
@@ -137,7 +162,7 @@ function normalise(raw: RawProduct): Product {
   return {
     id: raw.id,
     slug: raw.slug,
-    name: c.name ?? raw.name,
+    name: c.name ?? displayName(raw.name),
     kind: c.kind ?? guessKind(raw.name),
     blank: c.blank,
     tag: c.tag,
